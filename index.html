@@ -1,490 +1,408 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Site Científico</title>
+    <title>Ciência, Tecnologia e Inovação</title>
 
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    <meta name="description"
+        content="Site científico do Colégio Estadual Professor Gabriel Rosa - Curiúva, Paraná.">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body data-template-id="__page-root">
+<body>
 
-  <div class="site-shell">
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
 
-    <header
-      data-template-id="site-header"
-      class="canva-header sticky top-0 z-50 border-b border-cyan-300/15 bg-[#071827]/95 backdrop-blur"
-    >
-      <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+        <div class="logo">
+            <span>CEPR</span>
+            <div>
+                <h1>Ciência & Tecnologia</h1>
+                <p>Colégio Estadual Professor Gabriel Rosa</p>
+            </div>
+        </div>
 
-        <a
-          href="#inicio"
-          class="focus-ring flex items-center gap-3 rounded-sm"
-          aria-label="Ir para o início"
-        >
-          <span class="flex h-10 w-10 items-center justify-center rounded-full border border-cyan-300/70 bg-cyan-300/10 font-extrabold text-cyan-300">
-            I
-          </span>
-
-          <span
-            data-template-id="brand-name"
-            class="canva-text font-bold tracking-wide"
-          ></span>
-        </a>
-
-        <button
-          id="menu-toggle"
-          type="button"
-          class="focus-ring rounded-md p-2 text-cyan-200 md:hidden"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-          aria-controls="main-menu"
-        >
-          <i data-lucide="menu" width="24" height="24"></i>
-        </button>
-
-        <nav
-          id="main-menu"
-          aria-label="Navegação principal"
-          class="hidden absolute left-0 top-full w-full flex-col gap-5 border-b border-cyan-300/15 bg-[#071827] px-6 py-6 md:static md:flex md:w-auto md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0"
-        >
-          <a
-            data-template-id="nav-ifa"
-            class="canva-link nav-link focus-ring w-fit rounded-sm font-semibold text-cyan-50"
-            href="#ifa"
-          ></a>
-
-          <a
-            data-template-id="nav-programacao"
-            class="canva-link nav-link focus-ring w-fit rounded-sm font-semibold text-cyan-50"
-            href="#programacao"
-          ></a>
-
-          <a
-            data-template-id="nav-tecnociencia"
-            class="canva-link nav-link focus-ring w-fit rounded-sm font-semibold text-cyan-50"
-            href="#tecnociencia"
-          ></a>
-
-          <a
-            data-template-id="nav-robotica"
-            class="canva-link nav-link focus-ring w-fit rounded-sm font-semibold text-cyan-50"
-            href="#robotica"
-          ></a>
+        <!-- MENU -->
+        <nav class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#educacao-digital">Educação Digital</a>
+            <a href="#tecnociencia">Tecnociência</a>
+            <a href="#robotica">Robótica</a>
         </nav>
 
-      </div>
+        <button class="botao-menu" id="botaoMenu">
+            ☰
+        </button>
+
     </header>
+
 
     <main>
 
-      <!-- INÍCIO -->
-      <section id="inicio" class="relative isolate w-full overflow-hidden">
+        <!-- PÁGINA INICIAL -->
+        <section id="inicio" class="hero">
 
-        <div class="science-grid pointer-events-none absolute inset-0 opacity-60"></div>
+            <div class="hero-conteudo">
 
-        <div class="glow-orb absolute -left-20 top-24 h-64 w-64 rounded-full bg-cyan-300/20"></div>
+                <span class="etiqueta">PROJETO CIENTÍFICO</span>
 
-        <div class="glow-orb glow-orb-delayed absolute right-0 top-6 h-80 w-80 rounded-full bg-lime-300/10"></div>
+                <h2>
+                    Ciência, Tecnologia
+                    <span>e Inovação</span>
+                </h2>
 
-        <div class="relative mx-auto grid w-full max-w-7xl items-center gap-10 px-5 py-16 md:px-8 md:py-24 lg:grid-cols-[1.05fr_.95fr] lg:py-28">
+                <p>
+                    Um espaço para conhecer, pesquisar e compartilhar
+                    conhecimentos sobre ciência, tecnologia e inovação
+                    desenvolvidos no ambiente escolar.
+                </p>
 
-          <div>
-
-            <p
-              data-template-id="hero-kicker"
-              class="canva-text reveal inline-flex rounded-full border border-cyan-300/40 bg-cyan-300/10 px-4 py-1.5 font-bold uppercase tracking-[0.18em] text-cyan-200"
-            ></p>
-
-            <h1
-              data-template-id="hero-title"
-              class="canva-text reveal reveal-delay-1 mt-6 max-w-3xl font-extrabold leading-[0.98] tracking-tight"
-            ></h1>
-
-            <p
-              data-template-id="hero-description"
-              class="canva-text reveal reveal-delay-2 mt-6 max-w-2xl leading-relaxed text-slate-200"
-            ></p>
-
-            <a
-              data-template-id="hero-button"
-              href="#eixos"
-              class="canva-button focus-ring reveal reveal-delay-3 mt-8 inline-flex items-center gap-2 rounded-sm px-6 py-3 font-bold transition hover:-translate-y-0.5 hover:brightness-110"
-            >
-              <span></span>
-              <i data-lucide="arrow-down-right" width="19" height="19"></i>
-            </a>
-
-          </div>
-
-          <div class="reveal reveal-delay-2 relative">
-
-            <div class="absolute -inset-3 border border-cyan-300/35"></div>
-
-            <div class="relative overflow-hidden border border-cyan-300/30 bg-cyan-950/20 p-2">
-
-              <img
-                data-template-id="hero-image"
-                loading="lazy"
-                class="canva-image h-[330px] w-full object-cover md:h-[430px]"
-              >
-
-              <div class="absolute inset-x-2 bottom-2 flex items-end justify-between bg-gradient-to-t from-[#071827] via-[#071827]/60 to-transparent p-6">
-
-                <p
-                  data-template-id="hero-image-caption"
-                  class="canva-text max-w-xs font-semibold leading-snug text-cyan-50"
-                ></p>
-
-                <span class="flex h-11 w-11 items-center justify-center rounded-full border border-lime-300/70 bg-[#071827]/80 text-lime-300">
-                  <i data-lucide="cpu" width="21" height="21"></i>
-                </span>
-
-              </div>
+                <a href="#sobre" class="botao">
+                    Conheça o projeto
+                </a>
 
             </div>
 
-          </div>
+            <div class="hero-card">
+                <div class="icone-ciencia">🔬</div>
+                <h3>Conhecimento que transforma</h3>
+                <p>
+                    A ciência e a tecnologia fazem parte da construção
+                    de novas possibilidades para a sociedade.
+                </p>
+            </div>
 
-        </div>
+        </section>
 
-      </section>
 
-      <!-- IFA -->
-      <section
-        id="ifa"
-        data-template-id="ifa-section"
-        class="canva-section w-full border-y border-cyan-300/15 py-16 md:py-24"
-      >
+        <!-- SOBRE O COLÉGIO -->
+        <section id="sobre" class="secao sobre">
 
-        <div class="mx-auto grid w-full max-w-7xl gap-10 px-5 md:px-8 lg:grid-cols-[.9fr_1.1fr] lg:gap-16">
+            <div class="titulo-secao">
+                <span>01</span>
+                <h2>Colégio Estadual Professor Gabriel Rosa</h2>
+            </div>
 
-          <div>
+            <div class="sobre-grid">
 
-            <p
-              data-template-id="ifa-kicker"
-              class="canva-text font-bold uppercase tracking-[0.18em] text-cyan-300"
-            ></p>
+                <div class="sobre-texto">
 
-            <h2
-              data-template-id="ifa-title"
-              class="canva-text mt-3 font-extrabold leading-tight text-cyan-50"
-            ></h2>
+                    <h3>Educação, conhecimento e inovação</h3>
 
-            <div class="mt-6 h-1 w-20 bg-lime-300"></div>
+                    <p>
+                        O Colégio Estadual Professor Gabriel Rosa está
+                        localizado no município de Curiúva, no estado
+                        do Paraná.
+                    </p>
 
-          </div>
+                    <p>
+                        A escola representa um espaço de aprendizagem,
+                        convivência e desenvolvimento de conhecimentos,
+                        contribuindo para a formação dos estudantes e
+                        para sua participação ativa na sociedade.
+                    </p>
 
-          <div class="space-y-7">
+                    <p>
+                        Este projeto científico busca aproximar os
+                        estudantes da ciência e da tecnologia por meio
+                        da pesquisa, da experimentação, da criatividade
+                        e da resolução de problemas.
+                    </p>
 
-            <p
-              data-template-id="ifa-description"
-              class="canva-text leading-relaxed text-slate-200"
-            ></p>
+                </div>
 
-            <div
-              data-template-id="ifa-panel"
-              class="canva-panel grid gap-4 border border-cyan-300/25 p-6 sm:grid-cols-3"
-            >
+                <div class="informacoes">
 
-              <div>
-                <span class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-cyan-300/15 text-cyan-200">
-                  <i data-lucide="code-2" width="20" height="20"></i>
-                </span>
+                    <div class="info-card">
+                        <span>📍</span>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>Curiúva – Paraná</p>
+                        </div>
+                    </div>
 
-                <h3
-                  data-template-id="pillar-one-title"
-                  class="canva-text font-bold text-cyan-50"
-                ></h3>
+                    <div class="info-card">
+                        <span>🎓</span>
+                        <div>
+                            <h4>Educação</h4>
+                            <p>Aprendizagem e formação cidadã</p>
+                        </div>
+                    </div>
 
-                <p
-                  data-template-id="pillar-one-text"
-                  class="canva-text mt-1 leading-snug text-slate-300"
-                ></p>
-              </div>
+                    <div class="info-card">
+                        <span>💡</span>
+                        <div>
+                            <h4>Inovação</h4>
+                            <p>Ciência, tecnologia e criatividade</p>
+                        </div>
+                    </div>
 
-              <div>
-                <span class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-cyan-300/15 text-cyan-200">
-                  <i data-lucide="flask-conical" width="20" height="20"></i>
-                </span>
-
-                <h3
-                  data-template-id="pillar-two-title"
-                  class="canva-text font-bold text-cyan-50"
-                ></h3>
-
-                <p
-                  data-template-id="pillar-two-text"
-                  class="canva-text mt-1 leading-snug text-slate-300"
-                ></p>
-              </div>
-
-              <div>
-                <span class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-cyan-300/15 text-cyan-200">
-                  <i data-lucide="bot" width="20" height="20"></i>
-                </span>
-
-                <h3
-                  data-template-id="pillar-three-title"
-                  class="canva-text font-bold text-cyan-50"
-                ></h3>
-
-                <p
-                  data-template-id="pillar-three-text"
-                  class="canva-text mt-1 leading-snug text-slate-300"
-                ></p>
-              </div>
+                </div>
 
             </div>
 
-          </div>
+        </section>
 
-        </div>
 
-      </section>
+        <!-- EDUCAÇÃO DIGITAL -->
+        <section id="educacao-digital" class="secao secao-azul">
 
-      <!-- EIXOS -->
-      <section id="eixos" class="w-full py-16 md:py-24">
+            <div class="titulo-secao">
+                <span>02</span>
+                <h2>Educação Digital</h2>
+            </div>
 
-        <div class="mx-auto w-full max-w-7xl px-5 md:px-8">
+            <div class="conteudo-area">
 
-          <div class="max-w-3xl">
+                <div class="icone-area">
+                    💻
+                </div>
 
-            <p
-              data-template-id="topics-kicker"
-              class="canva-text font-bold uppercase tracking-[0.18em] text-lime-300"
-            ></p>
+                <div>
 
-            <h2
-              data-template-id="topics-title"
-              class="canva-text mt-3 font-extrabold leading-tight text-cyan-50"
-            ></h2>
+                    <h3>Aprender e participar no mundo digital</h3>
 
-            <p
-              data-template-id="topics-description"
-              class="canva-text mt-4 max-w-2xl leading-relaxed text-slate-300"
-            ></p>
+                    <p>
+                        A Educação Digital envolve o desenvolvimento de
+                        conhecimentos e habilidades para utilizar as
+                        tecnologias de maneira consciente, crítica,
+                        segura e criativa.
+                    </p>
 
-          </div>
+                    <p>
+                        No ambiente escolar, os estudantes podem utilizar
+                        recursos digitais para pesquisar, produzir
+                        conteúdos, programar, resolver problemas e
+                        compartilhar conhecimentos.
+                    </p>
 
-          <div class="mt-10 grid gap-6 lg:grid-cols-3">
+                    <div class="cards">
 
-            <!-- PROGRAMAÇÃO -->
-            <article
-              id="programacao"
-              data-template-id="programming-card"
-              class="canva-card topic-card overflow-hidden border border-cyan-300/20 bg-[#0b2438]"
-            >
+                        <article>
+                            <span>🔎</span>
+                            <h4>Pesquisa</h4>
+                            <p>
+                                Buscar, analisar e verificar informações
+                                disponíveis na internet.
+                            </p>
+                        </article>
 
-              <div class="h-52 overflow-hidden">
+                        <article>
+                            <span>🧠</span>
+                            <h4>Pensamento crítico</h4>
+                            <p>
+                                Avaliar informações e reconhecer conteúdos
+                                confiáveis.
+                            </p>
+                        </article>
 
-                <img
-                  data-template-id="programming-image"
-                  loading="lazy"
-                  class="canva-image h-full w-full object-cover"
-                >
+                        <article>
+                            <span>🌐</span>
+                            <h4>Cidadania digital</h4>
+                            <p>
+                                Utilizar a tecnologia de forma ética,
+                                responsável e consciente.
+                            </p>
+                        </article>
 
-              </div>
-
-              <div class="p-6">
-
-                <div class="mb-5 flex items-center justify-between">
-
-                  <span class="flex h-10 w-10 items-center justify-center rounded-full border border-cyan-300/40 text-cyan-200">
-                    <i data-lucide="code-2" width="20" height="20"></i>
-                  </span>
-
-                  <span
-                    data-template-id="programming-number"
-                    class="canva-tag font-bold text-lime-300"
-                  ></span>
+                    </div>
 
                 </div>
 
-                <h3
-                  data-template-id="programming-title"
-                  class="canva-text font-bold text-cyan-50"
-                ></h3>
+            </div>
 
-                <p
-                  data-template-id="programming-description"
-                  class="canva-text mt-3 leading-relaxed text-slate-300"
-                ></p>
+        </section>
 
-              </div>
 
-            </article>
+        <!-- TECNOCIÊNCIA -->
+        <section id="tecnociencia" class="secao">
 
-            <!-- TECNOCIÊNCIA -->
-            <article
-              id="tecnociencia"
-              data-template-id="technoscience-card"
-              class="canva-card topic-card overflow-hidden border border-cyan-300/20 bg-[#0b2438]"
-            >
+            <div class="titulo-secao">
+                <span>03</span>
+                <h2>Tecnociência</h2>
+            </div>
 
-              <div class="h-52 overflow-hidden">
+            <div class="tecnociencia">
 
-                <img
-                  data-template-id="technoscience-image"
-                  loading="lazy"
-                  class="canva-image h-full w-full object-cover"
-                >
+                <div class="texto-tecnociencia">
 
-              </div>
+                    <h3>Quando ciência e tecnologia caminham juntas</h3>
 
-              <div class="p-6">
+                    <p>
+                        Tecnociência é um conceito utilizado para compreender
+                        a relação cada vez mais próxima entre ciência,
+                        tecnologia e sociedade.
+                    </p>
 
-                <div class="mb-5 flex items-center justify-between">
+                    <p>
+                        A produção científica pode gerar novas tecnologias,
+                        enquanto as tecnologias também possibilitam novas
+                        descobertas e formas de investigação.
+                    </p>
 
-                  <span class="flex h-10 w-10 items-center justify-center rounded-full border border-cyan-300/40 text-cyan-200">
-                    <i data-lucide="flask-conical" width="20" height="20"></i>
-                  </span>
-
-                  <span
-                    data-template-id="technoscience-number"
-                    class="canva-tag font-bold text-lime-300"
-                  ></span>
+                    <p>
+                        Essa relação está presente em diversas áreas, como
+                        medicina, comunicação, agricultura, indústria,
+                        educação e exploração espacial.
+                    </p>
 
                 </div>
 
-                <h3
-                  data-template-id="technoscience-title"
-                  class="canva-text font-bold text-cyan-50"
-                ></h3>
+                <div class="linha-tempo">
 
-                <p
-                  data-template-id="technoscience-description"
-                  class="canva-text mt-3 leading-relaxed text-slate-300"
-                ></p>
+                    <div>
+                        <strong>01</strong>
+                        <h4>Ciência</h4>
+                        <p>Produção de conhecimentos.</p>
+                    </div>
 
-              </div>
+                    <div>
+                        <strong>02</strong>
+                        <h4>Tecnologia</h4>
+                        <p>Aplicação de conhecimentos para criar soluções.</p>
+                    </div>
 
-            </article>
-
-            <!-- ROBÓTICA -->
-            <article
-              id="robotica"
-              data-template-id="robotics-card"
-              class="canva-card topic-card overflow-hidden border border-cyan-300/20 bg-[#0b2438]"
-            >
-
-              <div class="h-52 overflow-hidden">
-
-                <img
-                  data-template-id="robotics-image"
-                  loading="lazy"
-                  class="canva-image h-full w-full object-cover"
-                >
-
-              </div>
-
-              <div class="p-6">
-
-                <div class="mb-5 flex items-center justify-between">
-
-                  <span class="flex h-10 w-10 items-center justify-center rounded-full border border-cyan-300/40 text-cyan-200">
-                    <i data-lucide="bot" width="20" height="20"></i>
-                  </span>
-
-                  <span
-                    data-template-id="robotics-number"
-                    class="canva-tag font-bold text-lime-300"
-                  ></span>
+                    <div>
+                        <strong>03</strong>
+                        <h4>Sociedade</h4>
+                        <p>Uso das soluções para transformar a realidade.</p>
+                    </div>
 
                 </div>
 
-                <h3
-                  data-template-id="robotics-title"
-                  class="canva-text font-bold text-cyan-50"
-                ></h3>
+            </div>
 
-                <p
-                  data-template-id="robotics-description"
-                  class="canva-text mt-3 leading-relaxed text-slate-300"
-                ></p>
+        </section>
 
-              </div>
 
-            </article>
+        <!-- ROBÓTICA -->
+        <section id="robotica" class="secao secao-verde">
 
-          </div>
+            <div class="titulo-secao">
+                <span>04</span>
+                <h2>Robótica</h2>
+            </div>
 
-        </div>
+            <div class="robotica-grid">
 
-      </section>
+                <div class="robo-ilustracao">
+                    🤖
+                </div>
 
-      <!-- CTA -->
-      <section
-        data-template-id="cta-section"
-        class="canva-banner w-full border-y border-lime-300/40 py-14 md:py-16"
-      >
+                <div class="robotica-texto">
 
-        <div class="mx-auto flex w-full max-w-7xl flex-col items-start justify-between gap-7 px-5 md:flex-row md:items-center md:px-8">
+                    <h3>Programar, construir e solucionar problemas</h3>
 
-          <div>
+                    <p>
+                        A Robótica Educacional utiliza conceitos de
+                        programação, eletrônica, matemática, física e
+                        engenharia para desenvolver projetos e solucionar
+                        problemas.
+                    </p>
 
-            <p
-              data-template-id="cta-kicker"
-              class="canva-text font-bold uppercase tracking-[0.16em] text-cyan-950"
-            ></p>
+                    <p>
+                        Por meio da robótica, os estudantes podem trabalhar
+                        em equipe, desenvolver o pensamento lógico,
+                        experimentar ideias e transformar projetos em
+                        protótipos.
+                    </p>
 
-            <h2
-              data-template-id="cta-title"
-              class="canva-text mt-2 font-extrabold leading-tight text-cyan-950"
-            ></h2>
+                    <div class="habilidades">
 
-          </div>
+                        <span>Programação</span>
+                        <span>Eletrônica</span>
+                        <span>Automação</span>
+                        <span> criatividade</span>
+                        <span>Trabalho em equipe</span>
+                        <span>Resolução de problemas</span>
 
-          <a
-            data-template-id="cta-link"
-            href="#inicio"
-            class="canva-button focus-ring inline-flex items-center gap-2 rounded-sm px-5 py-3 font-bold transition hover:-translate-y-0.5"
-          >
-            <span></span>
-            <i data-lucide="arrow-up" width="18" height="18"></i>
-          </a>
+                    </div>
 
-        </div>
+                </div>
 
-      </section>
+            </div>
+
+        </section>
+
+
+        <!-- PROJETO -->
+        <section class="secao projeto">
+
+            <div class="projeto-conteudo">
+
+                <span class="etiqueta">CIÊNCIA NA ESCOLA</span>
+
+                <h2>
+                    Aprender fazendo,
+                    pesquisar descobrindo.
+                </h2>
+
+                <p>
+                    A escola é um espaço onde ideias podem se transformar
+                    em conhecimento, projetos e soluções para problemas
+                    presentes na comunidade.
+                </p>
+
+                <button class="botao" id="botaoMensagem">
+                    Explorar o conhecimento
+                </button>
+
+            </div>
+
+        </section>
 
     </main>
 
+
     <!-- RODAPÉ -->
-    <footer
-      data-template-id="site-footer"
-      class=""
-    >
+    <footer>
 
-      <div class="mx-auto flex w-full max-w-7xl flex-col gap-3 px-5 py-7 md:flex-row md:items-center md:justify-between md:px-8">
+        <div class="footer-conteudo">
 
-        <p
-          data-template-id="footer-name"
-          class="2026"
-        ></p>
+            <div>
+                <h3>Ciência & Tecnologia</h3>
+                <p>
+                    Colégio Estadual Professor Gabriel Rosa
+                </p>
+                <p>
+                    Curiúva – Paraná
+                </p>
+            </div>
 
-        <p
-          data-template-id="footer-text"
-          class="canva-text text-slate-400"
-        ></p>
+            <div>
+                <h4>Áreas do projeto</h4>
+                <p>Educação Digital</p>
+                <p>Tecnociência</p>
+                <p>Robótica</p>
+            </div>
 
-      </div>
+            <div>
+                <h4>Projeto</h4>
+                <p>
+                    Educação, ciência, tecnologia e inovação.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>
+                © 2026 – Colégio Estadual Professor Gabriel Rosa
+            </p>
+            <p>
+                Projeto científico escolar
+            </p>
+        </div>
 
     </footer>
 
-  </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>

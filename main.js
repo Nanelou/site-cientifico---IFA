@@ -1,50 +1,83 @@
-document.addEventListener("DOMContentLoaded", function () {
+// ==============================
+// MENU MOBILE
+// ==============================
 
-  // Ativa os ícones do Lucide
-  lucide.createIcons();
+const botaoMenu = document.getElementById("botaoMenu");
+const menu = document.querySelector(".menu");
 
-  // Seleciona o botão do menu
-  const toggle = document.getElementById("menu-toggle");
+botaoMenu.addEventListener("click", function () {
 
-  // Seleciona o menu
-  const menu = document.getElementById("main-menu");
+    menu.classList.toggle("ativo");
 
-  // Abre e fecha o menu no celular
-  toggle.addEventListener("click", function () {
+});
 
-    const isOpen = menu.classList.toggle("mobile-menu-open");
 
-    toggle.setAttribute(
-      "aria-expanded",
-      String(isOpen)
-    );
+// Fecha o menu quando o usuário
+// clica em uma opção
 
-    toggle.setAttribute(
-      "aria-label",
-      isOpen ? "Fechar menu" : "Abrir menu"
-    );
+const linksMenu = document.querySelectorAll(".menu a");
 
-  });
-
-  // Fecha o menu quando um link é clicado
-  menu.querySelectorAll("a").forEach(function (link) {
+linksMenu.forEach(function (link) {
 
     link.addEventListener("click", function () {
 
-      menu.classList.remove("mobile-menu-open");
-
-      toggle.setAttribute(
-        "aria-expanded",
-        "false"
-      );
-
-      toggle.setAttribute(
-        "aria-label",
-        "Abrir menu"
-      );
+        menu.classList.remove("ativo");
 
     });
 
-  });
+});
+
+
+// ==============================
+// BOTÃO DO PROJETO
+// ==============================
+
+const botaoMensagem = document.getElementById("botaoMensagem");
+
+botaoMensagem.addEventListener("click", function () {
+
+    alert(
+        "Bem-vindo ao projeto Ciência & Tecnologia do Colégio Estadual Professor Gabriel Rosa!"
+    );
+
+});
+
+
+// ==============================
+// ANIMAÇÃO DAS SEÇÕES
+// ==============================
+
+const elementos = document.querySelectorAll(
+    ".info-card, .cards article, .linha-tempo div"
+);
+
+const observador = new IntersectionObserver(
+    function (entradas) {
+
+        entradas.forEach(function (entrada) {
+
+            if (entrada.isIntersecting) {
+
+                entrada.target.style.opacity = "1";
+                entrada.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+
+elementos.forEach(function (elemento) {
+
+    elemento.style.opacity = "0";
+    elemento.style.transform = "translateY(30px)";
+    elemento.style.transition = "0.6s";
+
+    observador.observe(elemento);
 
 });
