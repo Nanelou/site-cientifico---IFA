@@ -1,165 +1,1067 @@
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
 :root {
-  --ink: #071827;
-  --ink-soft: #0b2438;
-  --cyan: #32d7e2;
-  --lime: #d9f75b;
-  --paper: #edf8f7;
+    --ink: #071827;
+    --ink-soft: #0b2438;
+    --cyan: #32d7e2;
+    --lime: #d9f75b;
+    --paper: #edf8f7;
+    --text-soft: #c9d9df;
+    --border: rgba(50, 215, 226, 0.20);
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  width: 100%;
-  font-family: "Source Sans Pro", sans-serif;
-  color: var(--paper);
-  background: #071827;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: "Source Sans Pro", sans-serif;
+
+    color: var(--paper);
+    background: var(--ink);
+
+    line-height: 1.7;
 }
+
+
+/* =========================================================
+   FUNDO
+========================================================= */
 
 .site-shell {
-  width: 100%;
-  min-height: calc(100 * min(var(--vh, 1vh), 1vh));
-  overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
 
-  background-image:
-    linear-gradient(
-      rgba(50, 215, 226, 0.045) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(50, 215, 226, 0.045) 1px,
-      transparent 1px
-    );
+    overflow: hidden;
 
-  background-size: 42px 42px;
+    background-image:
+        linear-gradient(
+            rgba(50, 215, 226, 0.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(50, 215, 226, 0.045) 1px,
+            transparent 1px
+        );
+
+    background-size: 42px 42px;
 }
 
-.nav-link {
-  position: relative;
-  transition: color 180ms ease;
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    padding: 15px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background: rgba(7, 24, 39, 0.97);
+
+    border-bottom:
+        1px solid var(--border);
+
+    backdrop-filter: blur(10px);
 }
 
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -7px;
-  width: 0;
-  height: 2px;
-  background: var(--lime);
-  transition: width 180ms ease;
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
 }
 
-.nav-link:hover::after,
-.nav-link:focus-visible::after {
-  width: 100%;
+
+.logo img {
+    width: 70px;
+    height: 70px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    border:
+        2px solid var(--cyan);
+
+    background:
+        rgba(50, 215, 226, 0.08);
 }
 
-.science-grid {
-  background-image:
-    linear-gradient(
-      rgba(50, 215, 226, 0.16) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(50, 215, 226, 0.16) 1px,
-      transparent 1px
-    );
 
-  background-size: 32px 32px;
-
-  mask-image: linear-gradient(
-    to bottom,
-    black 35%,
-    transparent
-  );
+.logo-texto {
+    text-align: center;
 }
 
-.glow-orb {
-  filter: blur(2px);
-  animation: drift 7s ease-in-out infinite;
+
+.logo-texto h1 {
+    margin: 0;
+
+    color: var(--cyan);
+
+    font-size:
+        clamp(1.8rem, 3vw, 2.8rem);
+
+    font-weight: 800;
+
+    line-height: 1.1;
 }
 
-.glow-orb-delayed {
-  animation-delay: -3.5s;
+
+.logo-texto p {
+    margin: 5px 0 0;
+
+    color: var(--paper);
+
+    text-align: center;
+
+    font-size: 1rem;
 }
 
-.reveal {
-  animation: reveal 700ms both ease-out;
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 28px;
 }
 
-.reveal-delay-1 {
-  animation-delay: 100ms;
+
+.menu a {
+    position: relative;
+
+    color: var(--paper);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.2s;
 }
 
-.reveal-delay-2 {
-  animation-delay: 190ms;
+
+.menu a:hover {
+    color: var(--lime);
 }
 
-.reveal-delay-3 {
-  animation-delay: 280ms;
+
+.menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--lime);
+
+    transition: 0.2s;
 }
 
-.topic-card {
-  transition:
-    transform 220ms ease,
-    border-color 220ms ease,
-    box-shadow 220ms ease;
+
+.menu a:hover::after {
+    width: 100%;
 }
 
-.topic-card:hover,
-.topic-card:focus-within {
-  transform: translateY(-7px);
-  border-color: rgba(217, 247, 91, 0.9);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+
+/* =========================================================
+   BOTÃO MOBILE
+========================================================= */
+
+.botao-menu {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--cyan);
+
+    font-size: 2rem;
+
+    cursor: pointer;
 }
 
-.topic-card img {
-  transition: transform 450ms ease;
+
+/* =========================================================
+   SEÇÕES
+========================================================= */
+
+.secao,
+.hero,
+.projeto {
+    width: 100%;
+
+    padding:
+        80px 7%;
 }
 
-.topic-card:hover img {
-  transform: scale(1.06);
+
+/* =========================================================
+   TÍTULOS
+========================================================= */
+
+.titulo-secao {
+    width: 100%;
+
+    margin-bottom: 45px;
+
+    text-align: center;
 }
 
-.focus-ring:focus-visible {
-  outline: 3px solid var(--lime);
-  outline-offset: 4px;
+
+.titulo-secao span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--lime);
+
+    font-weight: 800;
+
+    letter-spacing: 0.2em;
 }
 
-@keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.titulo-secao h2 {
+    margin: 0;
+
+    color: var(--cyan);
+
+    font-size:
+        clamp(2rem, 5vw, 3.5rem);
+
+    font-weight: 800;
+
+    text-align: center;
 }
 
-@keyframes drift {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
 
-  50% {
-    transform: translate(18px, -15px) scale(1.08);
-  }
+/* =========================================================
+   TEXTOS
+========================================================= */
+
+p {
+    text-align: justify;
 }
 
-@media (max-width: 767px) {
-  .mobile-menu-open {
-    display: flex !important;
-  }
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   PÁGINA INICIAL
+========================================================= */
+
+.hero {
+    min-height: 78vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 55px;
+
+    text-align: center;
+}
+
+
+.hero-conteudo {
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.etiqueta {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    color: var(--lime);
+
+    border:
+        1px solid rgba(217, 247, 91, 0.45);
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+}
+
+
+.hero h2 {
+    margin: 20px 0;
+
+    color: var(--paper);
+
+    font-size:
+        clamp(3rem, 7vw, 6.5rem);
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    text-align: center;
+}
+
+
+.hero h2 span {
+    display: block;
+
+    color: var(--cyan);
+}
+
+
+.hero p {
+    max-width: 780px;
+
+    margin:
+        28px auto;
+
+    color: var(--text-soft);
+
+    font-size: 1.2rem;
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   CARD PRINCIPAL
+========================================================= */
+
+.hero-card {
+    max-width: 350px;
+
+    padding: 30px;
+
+    background:
+        rgba(11, 36, 56, 0.85);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+
+.hero-card h3 {
+    color: var(--cyan);
+
+    text-align: center;
+}
+
+
+.hero-card p {
+    text-align: justify;
+}
+
+
+.icone-ciencia {
+    font-size: 4rem;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   BOTÃO
+========================================================= */
+
+.botao {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding:
+        13px 24px;
+
+    color: var(--ink);
+
+    background: var(--lime);
+
+    border:
+        2px solid var(--lime);
+
+    border-radius: 6px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.botao:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   SOBRE O COLÉGIO
+========================================================= */
+
+.sobre-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.3fr 0.7fr;
+
+    gap: 50px;
+}
+
+
+.sobre-texto h3 {
+    color: var(--cyan);
+
+    text-align: center;
+
+    font-size: 1.8rem;
+}
+
+
+.sobre-texto p {
+    color: var(--text-soft);
+
+    font-size: 1.08rem;
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES
+========================================================= */
+
+.informacoes {
+    display: grid;
+
+    gap: 18px;
+}
+
+
+.info-card {
+    padding: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background:
+        var(--ink-soft);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 12px;
+
+    transition: 0.25s;
+}
+
+
+.info-card:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        var(--lime);
+}
+
+
+.info-card > span {
+    font-size: 2rem;
+}
+
+
+.info-card h4 {
+    margin: 0;
+
+    color: var(--cyan);
+
+    text-align: center;
+}
+
+
+.info-card p {
+    margin: 0;
+
+    color: var(--text-soft);
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   EDUCAÇÃO DIGITAL
+========================================================= */
+
+.secao-azul {
+    background:
+        rgba(11, 36, 56, 0.72);
+}
+
+
+.conteudo-area {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        120px 1fr;
+
+    gap: 35px;
+}
+
+
+.conteudo-area h3 {
+    color: var(--cyan);
+
+    text-align: center;
+
+    font-size: 1.8rem;
+}
+
+
+.conteudo-area p {
+    color: var(--text-soft);
+
+    text-align: justify;
+
+    font-size: 1.08rem;
+}
+
+
+.icone-area {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 5rem;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.cards {
+    margin-top: 35px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.cards article {
+    padding: 25px;
+
+    background: var(--ink);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    transition: 0.25s;
+}
+
+
+.cards article:hover {
+    transform:
+        translateY(-7px);
+
+    border-color:
+        var(--lime);
+}
+
+
+.cards article span {
+    font-size: 2.2rem;
+}
+
+
+.cards h4 {
+    color: var(--cyan);
+
+    text-align: center;
+}
+
+
+.cards p {
+    color: var(--text-soft);
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   TECNOCIÊNCIA
+========================================================= */
+
+.tecnociencia {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 60px;
+}
+
+
+.texto-tecnociencia h3 {
+    color: var(--cyan);
+
+    text-align: center;
+}
+
+
+.texto-tecnociencia p {
+    color: var(--text-soft);
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   LINHA DO TEMPO
+========================================================= */
+
+.linha-tempo {
+    display: grid;
+
+    gap: 20px;
+}
+
+
+.linha-tempo div {
+    padding: 25px;
+
+    background:
+        var(--ink-soft);
+
+    border:
+        1px solid var(--border);
+
+    border-left:
+        4px solid var(--lime);
+
+    border-radius: 8px;
+
+    text-align: center;
+}
+
+
+.linha-tempo strong {
+    color: var(--lime);
+
+    font-size: 1.6rem;
+}
+
+
+.linha-tempo h4 {
+    color: var(--cyan);
+
+    text-align: center;
+
+    margin: 8px 0;
+}
+
+
+.linha-tempo p {
+    color: var(--text-soft);
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   ROBÓTICA
+========================================================= */
+
+.secao-verde {
+    background:
+        rgba(35, 55, 20, 0.35);
+}
+
+
+.robotica-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        0.7fr 1.3fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+
+.robo-ilustracao {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 8rem;
+}
+
+
+.robotica-texto {
+    text-align: center;
+}
+
+
+.robotica-texto h3 {
+    color: var(--cyan);
+
+    text-align: center;
+}
+
+
+.robotica-texto p {
+    color: var(--text-soft);
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   HABILIDADES
+========================================================= */
+
+.habilidades {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+.habilidades span {
+    padding:
+        8px 14px;
+
+    color: var(--ink);
+
+    background:
+        var(--lime);
+
+    border-radius: 20px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PROJETO FINAL
+========================================================= */
+
+.projeto {
+    display: flex;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b2438,
+            #071827
+        );
+}
+
+
+.projeto-conteudo {
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.projeto h2 {
+    color: var(--paper);
+
+    font-size:
+        clamp(2.2rem, 5vw, 4.2rem);
+
+    text-align: center;
+}
+
+
+.projeto p {
+    color: var(--text-soft);
+
+    font-size: 1.15rem;
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+footer {
+    padding:
+        50px 7% 20px;
+
+    background: #06131f;
+}
+
+
+.footer-conteudo {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 35px;
+
+    text-align: center;
+}
+
+
+.footer-conteudo h3,
+.footer-conteudo h4 {
+    color: var(--cyan);
+
+    text-align: center;
+}
+
+
+.footer-conteudo p {
+    color: var(--text-soft);
+
+    text-align: center;
+}
+
+
+.copyright {
+    max-width: 1200px;
+
+    margin:
+        30px auto 0;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid var(--border);
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .cabecalho {
+        padding: 12px 5%;
+    }
+
+
+    .logo img {
+        width: 58px;
+        height: 58px;
+    }
+
+
+    .logo-texto h1 {
+        font-size: 1.6rem;
+    }
+
+
+    .logo-texto p {
+        font-size: 0.85rem;
+    }
+
+
+    .botao-menu {
+        display: block;
+    }
+
+
+    .menu {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        background:
+            rgba(7, 24, 39, 0.98);
+
+        border-bottom:
+            1px solid var(--border);
+    }
+
+
+    .menu.ativo {
+        display: flex;
+    }
+
+
+    .hero {
+        flex-direction: column;
+    }
+
+
+    .sobre-grid,
+    .tecnociencia,
+    .robotica-grid,
+    .conteudo-area {
+        grid-template-columns: 1fr;
+    }
+
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .secao,
+    .hero,
+    .projeto {
+        padding:
+            60px 5%;
+    }
+
+
+    .logo-texto h1 {
+        font-size: 1.3rem;
+    }
+
+
+    .logo-texto p {
+        font-size: 0.75rem;
+    }
+
+
+    .hero h2 {
+        font-size: 2.8rem;
+    }
+
+
+    .hero p,
+    .sobre-texto p,
+    .conteudo-area p,
+    .texto-tecnociencia p,
+    .robotica-texto p,
+    .projeto p {
+        text-align: justify;
+    }
+
 }

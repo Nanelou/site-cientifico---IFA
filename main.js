@@ -1,83 +1,151 @@
-// ==============================
+// =========================================================
 // MENU MOBILE
-// ==============================
+// =========================================================
 
-const botaoMenu = document.getElementById("botaoMenu");
-const menu = document.querySelector(".menu");
+const botaoMenu =
+    document.getElementById("botaoMenu");
 
-botaoMenu.addEventListener("click", function () {
-
-    menu.classList.toggle("ativo");
-
-});
+const menu =
+    document.querySelector(".menu");
 
 
-// Fecha o menu quando o usuário
-// clica em uma opção
+if (botaoMenu && menu) {
 
-const linksMenu = document.querySelectorAll(".menu a");
+    botaoMenu.addEventListener(
+        "click",
+        function () {
 
-linksMenu.forEach(function (link) {
+            menu.classList.toggle("ativo");
 
-    link.addEventListener("click", function () {
+            const menuAberto =
+                menu.classList.contains("ativo");
 
-        menu.classList.remove("ativo");
+            botaoMenu.setAttribute(
+                "aria-expanded",
+                menuAberto
+            );
 
-    });
-
-});
-
-
-// ==============================
-// BOTÃO DO PROJETO
-// ==============================
-
-const botaoMensagem = document.getElementById("botaoMensagem");
-
-botaoMensagem.addEventListener("click", function () {
-
-    alert(
-        "Bem-vindo ao projeto Ciência & Tecnologia do Colégio Estadual Professor Gabriel Rosa!"
+        }
     );
 
-});
+}
 
 
-// ==============================
-// ANIMAÇÃO DAS SEÇÕES
-// ==============================
+// =========================================================
+// FECHAR MENU AO CLICAR
+// =========================================================
 
-const elementos = document.querySelectorAll(
-    ".info-card, .cards article, .linha-tempo div"
-);
+const linksMenu =
+    document.querySelectorAll(".menu a");
 
-const observador = new IntersectionObserver(
-    function (entradas) {
 
-        entradas.forEach(function (entrada) {
+linksMenu.forEach(
+    function (link) {
 
-            if (entrada.isIntersecting) {
+        link.addEventListener(
+            "click",
+            function () {
 
-                entrada.target.style.opacity = "1";
-                entrada.target.style.transform = "translateY(0)";
+                menu.classList.remove("ativo");
+
+                botaoMenu.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
             }
+        );
 
-        });
-
-    },
-    {
-        threshold: 0.2
     }
 );
 
 
-elementos.forEach(function (elemento) {
+// =========================================================
+// BOTÃO DO PROJETO
+// =========================================================
 
-    elemento.style.opacity = "0";
-    elemento.style.transform = "translateY(30px)";
-    elemento.style.transition = "0.6s";
+const botaoMensagem =
+    document.getElementById("botaoMensagem");
 
-    observador.observe(elemento);
 
-});
+if (botaoMensagem) {
+
+    botaoMensagem.addEventListener(
+        "click",
+        function () {
+
+            alert(
+                "Bem-vindo ao projeto Ciência & Tecnologia do Colégio Estadual Professor Gabriel Rosa!"
+            );
+
+        }
+    );
+
+}
+
+
+// =========================================================
+// ANIMAÇÃO DAS SEÇÕES
+// =========================================================
+
+const elementos =
+    document.querySelectorAll(
+        ".info-card, .cards article, .linha-tempo div"
+    );
+
+
+if ("IntersectionObserver" in window) {
+
+    const observador =
+        new IntersectionObserver(
+            function (entradas) {
+
+                entradas.forEach(
+                    function (entrada) {
+
+                        if (
+                            entrada.isIntersecting
+                        ) {
+
+                            entrada.target.style.opacity =
+                                "1";
+
+                            entrada.target.style.transform =
+                                "translateY(0)";
+
+                            observador.unobserve(
+                                entrada.target
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold: 0.2
+            }
+        );
+
+
+    elementos.forEach(
+        function (elemento) {
+
+            elemento.style.opacity =
+                "0";
+
+            elemento.style.transform =
+                "translateY(30px)";
+
+            elemento.style.transition =
+                "opacity 0.6s ease, transform 0.6s ease";
+
+            observador.observe(
+                elemento
+            );
+
+        }
+    );
+
+}
