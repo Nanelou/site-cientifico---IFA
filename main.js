@@ -1,6 +1,6 @@
-// =========================================================
+// =====================================================
 // MENU MOBILE
-// =========================================================
+// =====================================================
 
 const botaoMenu =
     document.getElementById("botaoMenu");
@@ -17,12 +17,12 @@ if (botaoMenu && menu) {
 
             menu.classList.toggle("ativo");
 
-            const menuAberto =
+            const aberto =
                 menu.classList.contains("ativo");
 
             botaoMenu.setAttribute(
                 "aria-expanded",
-                menuAberto
+                aberto
             );
 
         }
@@ -31,9 +31,9 @@ if (botaoMenu && menu) {
 }
 
 
-// =========================================================
-// FECHAR MENU AO CLICAR
-// =========================================================
+// =====================================================
+// FECHAR MENU
+// =====================================================
 
 const linksMenu =
     document.querySelectorAll(".menu a");
@@ -46,12 +46,22 @@ linksMenu.forEach(
             "click",
             function () {
 
-                menu.classList.remove("ativo");
+                if (menu) {
 
-                botaoMenu.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+                    menu.classList.remove(
+                        "ativo"
+                    );
+
+                }
+
+                if (botaoMenu) {
+
+                    botaoMenu.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
 
             }
         );
@@ -60,33 +70,9 @@ linksMenu.forEach(
 );
 
 
-// =========================================================
-// BOTÃO DO PROJETO
-// =========================================================
-
-const botaoMensagem =
-    document.getElementById("botaoMensagem");
-
-
-if (botaoMensagem) {
-
-    botaoMensagem.addEventListener(
-        "click",
-        function () {
-
-            alert(
-                "Bem-vindo ao projeto Ciência & Tecnologia do Colégio Estadual Professor Gabriel Rosa!"
-            );
-
-        }
-    );
-
-}
-
-
-// =========================================================
-// ANIMAÇÃO DAS SEÇÕES
-// =========================================================
+// =====================================================
+// ANIMAÇÃO DOS CARDS
+// =====================================================
 
 const elementos =
     document.querySelectorAll(
@@ -98,6 +84,7 @@ if ("IntersectionObserver" in window) {
 
     const observador =
         new IntersectionObserver(
+
             function (entradas) {
 
                 entradas.forEach(
@@ -123,9 +110,11 @@ if ("IntersectionObserver" in window) {
                 );
 
             },
+
             {
                 threshold: 0.2
             }
+
         );
 
 

@@ -2,808 +2,420 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Educação Digital | Profª Elaine Lourenço</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>
+        Educação Digital | Ciência & Tecnologia
+    </title>
 
-    <!-- Lucide Icons -->
-    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    <link rel="stylesheet"
+          href="style.css">
 
-    <!-- Fonte -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- CSS próprio -->
-    <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
-    <div class="site-shell">
+<div class="site-shell">
 
-        <!-- =========================
-             MENU
-        ========================== -->
 
-        <header class="sticky top-0 z-50 border-b border-cyan-300/15 bg-[#071827]/95 backdrop-blur">
+    <!-- ==============================
+         CABEÇALHO
+    =============================== -->
 
-            <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+    <header class="cabecalho">
 
-                <a
-                    href="index.html"
-                    class="focus-ring flex items-center gap-3 rounded-sm"
-                >
+        <div class="logo">
 
-                    <span class="flex h-10 w-10 items-center justify-center rounded-full border border-cyan-300/70 bg-cyan-300/10 font-extrabold text-cyan-300">
-                        I
-                    </span>
+            <img src="img/slogan.png.jpg"
+                 alt="Logo do Colégio Estadual Professor Gabriel Rosa">
 
-                    <span class="font-bold tracking-wide text-cyan-50">
-                        Educação Digital
-                    </span>
+            <div class="logo-texto">
 
-                </a>
+                <h1>
+                    Ciência & Tecnologia
+                </h1>
 
-                <button
-                    id="menu-toggle"
-                    type="button"
-                    class="focus-ring rounded-md p-2 text-cyan-200 md:hidden"
-                    aria-label="Abrir menu"
-                    aria-expanded="false"
-                    aria-controls="main-menu"
-                >
-                    <i data-lucide="menu" width="24" height="24"></i>
-                </button>
-
-                <nav
-                    id="main-menu"
-                    class="hidden absolute left-0 top-full w-full flex-col gap-5 border-b border-cyan-300/15 bg-[#071827] px-6 py-6 md:static md:flex md:w-auto md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0"
-                >
-
-                    <a
-                        href="index.html"
-                        class="nav-link focus-ring w-fit rounded-sm font-semibold text-cyan-50"
-                    >
-                        Início
-                    </a>
-
-                    <a
-                        href="educacao-digital.html"
-                        class="nav-link focus-ring w-fit rounded-sm font-semibold text-cyan-50"
-                    >
-                        Educação Digital
-                    </a>
-
-                    <a
-                        href="programacao.html"
-                        class="nav-link focus-ring w-fit rounded-sm font-semibold text-cyan-50"
-                    >
-                        Programação
-                    </a>
-
-                    <a
-                        href="tecnociencia.html"
-                        class="nav-link focus-ring w-fit rounded-sm font-semibold text-cyan-50"
-                    >
-                        Tecnociência
-                    </a>
-
-                    <a
-                        href="robotica.html"
-                        class="nav-link focus-ring w-fit rounded-sm font-semibold text-cyan-50"
-                    >
-                        Robótica
-                    </a>
-
-                </nav>
-
-            </div>
-
-        </header>
-
-
-        <!-- =========================
-             CONTEÚDO PRINCIPAL
-        ========================== -->
-
-        <main>
-
-            <!-- APRESENTAÇÃO -->
-
-            <section class="relative overflow-hidden">
-
-                <div class="science-grid pointer-events-none absolute inset-0 opacity-60"></div>
-
-                <div class="relative mx-auto w-full max-w-7xl px-5 py-16 md:px-8 md:py-24">
-
-                    <div class="mx-auto max-w-4xl text-center">
-
-                        <p class="mb-4 font-bold uppercase tracking-[0.18em] text-cyan-300">
-                            Educação Digital
-                        </p>
-
-                        <h1 class="text-4xl font-extrabold leading-tight text-cyan-50 md:text-6xl">
-                            Professora Elaine Lourenço
-                        </h1>
-
-                        <div class="mx-auto mt-6 h-1 w-24 bg-lime-300"></div>
-
-                        <p class="mt-8 text-lg leading-relaxed text-slate-200 md:text-xl">
-                            Educação, Computação, Programação e Inteligência Artificial
-                            conectadas para transformar a aprendizagem.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- SOBRE A PROFESSORA -->
-
-            <section class="border-y border-cyan-300/15 py-16 md:py-24">
-
-                <div class="mx-auto grid w-full max-w-7xl gap-10 px-5 md:px-8 lg:grid-cols-[0.8fr_1.2fr]">
-
-                    <div>
-
-                        <p class="font-bold uppercase tracking-[0.18em] text-cyan-300">
-                            Minha trajetória
-                        </p>
-
-                        <h2 class="mt-3 text-3xl font-extrabold text-cyan-50 md:text-4xl">
-                            Formação acadêmica e profissional
-                        </h2>
-
-                        <div class="mt-6 h-1 w-20 bg-lime-300"></div>
-
-                    </div>
-
-                    <div class="space-y-6 text-lg leading-relaxed text-slate-200">
-
-                        <p>
-                            Sou <strong class="text-cyan-200">Professora Elaine Lourenço</strong>,
-                            graduada em <strong>Ciências Sociais pela Universidade Estadual
-                            de Londrina – UEL</strong> e em <strong>História pela Universidade
-                            Leonardo da Vinci</strong>.
-                        </p>
-
-                        <p>
-                            Atualmente, sou acadêmica do curso de
-                            <strong class="text-cyan-200">Licenciatura em Informática</strong>,
-                            ampliando minha formação nas áreas de Computação, Tecnologia e Educação.
-                        </p>
-
-                        <p>
-                            Também possuo
-                            <strong>Pós-Graduação em Libras, Português e Educação do Campo
-                            pelo Centro Universitário Dom Bosco</strong>.
-                        </p>
-
-                        <p>
-                            Minha trajetória profissional e acadêmica tem sido construída
-                            a partir da integração entre
-                            <strong>Educação, Ciências Humanas e Tecnologia</strong>,
-                            buscando aproximar o conhecimento escolar das transformações
-                            provocadas pela cultura digital.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- ÁREAS DE FORMAÇÃO -->
-
-            <section class="py-16 md:py-24">
-
-                <div class="mx-auto w-full max-w-7xl px-5 md:px-8">
-
-                    <div class="mx-auto max-w-3xl text-center">
-
-                        <p class="font-bold uppercase tracking-[0.18em] text-lime-300">
-                            Formação continuada
-                        </p>
-
-                        <h2 class="mt-3 text-3xl font-extrabold text-cyan-50 md:text-4xl">
-                            Áreas de conhecimento
-                        </h2>
-
-                        <p class="mt-5 text-lg leading-relaxed text-slate-300">
-                            Minha formação continuada reúne estudos em diferentes áreas
-                            relacionadas à Educação Digital e à Computação.
-                        </p>
-
-                    </div>
-
-
-                    <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-
-
-                        <!-- CARD 1 -->
-
-                        <article class="topic-card border border-cyan-300/20 bg-[#0b2438] p-6">
-
-                            <span class="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-cyan-300/15 text-cyan-200">
-                                <i data-lucide="code-2"></i>
-                            </span>
-
-                            <h3 class="text-xl font-bold text-cyan-50">
-                                Desenvolvimento Web
-                            </h3>
-
-                            <p class="mt-3 leading-relaxed text-slate-300">
-                                HTML, CSS, JavaScript, responsividade, GitHub,
-                                portfólios, páginas web e interfaces digitais.
-                            </p>
-
-                        </article>
-
-
-                        <!-- CARD 2 -->
-
-                        <article class="topic-card border border-cyan-300/20 bg-[#0b2438] p-6">
-
-                            <span class="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-cyan-300/15 text-cyan-200">
-                                <i data-lucide="brain"></i>
-                            </span>
-
-                            <h3 class="text-xl font-bold text-cyan-50">
-                                Pensamento Computacional
-                            </h3>
-
-                            <p class="mt-3 leading-relaxed text-slate-300">
-                                Lógica, algoritmos, decomposição, funções,
-                                listas, repetição e resolução de problemas.
-                            </p>
-
-                        </article>
-
-
-                        <!-- CARD 3 -->
-
-                        <article class="topic-card border border-cyan-300/20 bg-[#0b2438] p-6">
-
-                            <span class="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-cyan-300/15 text-cyan-200">
-                                <i data-lucide="bot"></i>
-                            </span>
-
-                            <h3 class="text-xl font-bold text-cyan-50">
-                                Inteligência Artificial
-                            </h3>
-
-                            <p class="mt-3 leading-relaxed text-slate-300">
-                                Inteligência Artificial na educação, resolução
-                                de problemas e uso ético e responsável da IA.
-                            </p>
-
-                        </article>
-
-
-                        <!-- CARD 4 -->
-
-                        <article class="topic-card border border-cyan-300/20 bg-[#0b2438] p-6">
-
-                            <span class="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-cyan-300/15 text-cyan-200">
-                                <i data-lucide="bar-chart-3"></i>
-                            </span>
-
-                            <h3 class="text-xl font-bold text-cyan-50">
-                                Ciência de Dados
-                            </h3>
-
-                            <p class="mt-3 leading-relaxed text-slate-300">
-                                Python, análise de dados, planilhas, organização
-                                de informações e modelos computacionais.
-                            </p>
-
-                        </article>
-
-
-                        <!-- CARD 5 -->
-
-                        <article class="topic-card border border-cyan-300/20 bg-[#0b2438] p-6">
-
-                            <span class="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-cyan-300/15 text-cyan-200">
-                                <i data-lucide="accessibility"></i>
-                            </span>
-
-                            <h3 class="text-xl font-bold text-cyan-50">
-                                Acessibilidade
-                            </h3>
-
-                            <p class="mt-3 leading-relaxed text-slate-300">
-                                UX, acessibilidade na Web, interfaces inclusivas
-                                e experiências digitais acessíveis.
-                            </p>
-
-                        </article>
-
-
-                        <!-- CARD 6 -->
-
-                        <article class="topic-card border border-cyan-300/20 bg-[#0b2438] p-6">
-
-                            <span class="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-cyan-300/15 text-cyan-200">
-                                <i data-lucide="palette"></i>
-                            </span>
-
-                            <h3 class="text-xl font-bold text-cyan-50">
-                                Programação Criativa
-                            </h3>
-
-                            <p class="mt-3 leading-relaxed text-slate-300">
-                                Scratch, P5.js, JavaScript e desenvolvimento
-                                de projetos interativos e criativos.
-                            </p>
-
-                        </article>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- FORMAÇÃO EM TECNOLOGIA -->
-
-            <section class="border-y border-cyan-300/15 py-16 md:py-24">
-
-                <div class="mx-auto w-full max-w-7xl px-5 md:px-8">
-
-                    <div class="max-w-4xl">
-
-                        <p class="font-bold uppercase tracking-[0.18em] text-cyan-300">
-                            Tecnologia e educação
-                        </p>
-
-                        <h2 class="mt-3 text-3xl font-extrabold text-cyan-50 md:text-4xl">
-                            Formação em Programação e Desenvolvimento
-                        </h2>
-
-                        <div class="mt-6 h-1 w-20 bg-lime-300"></div>
-
-                        <p class="mt-8 text-lg leading-relaxed text-slate-200">
-                            Ao longo da minha formação continuada, venho realizando
-                            cursos e capacitações voltados ao desenvolvimento de
-                            tecnologias e ao ensino de Computação.
-                        </p>
-
-                    </div>
-
-
-                    <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-
-                        <div class="border border-cyan-300/20 bg-[#0b2438] p-5">
-                            <strong class="text-cyan-200">HTML5 e CSS3</strong>
-                            <p class="mt-2 text-slate-300">
-                                Criação e estruturação de páginas Web.
-                            </p>
-                        </div>
-
-                        <div class="border border-cyan-300/20 bg-[#0b2438] p-5">
-                            <strong class="text-cyan-200">JavaScript</strong>
-                            <p class="mt-2 text-slate-300">
-                                Desenvolvimento de páginas e aplicações dinâmicas.
-                            </p>
-                        </div>
-
-                        <div class="border border-cyan-300/20 bg-[#0b2438] p-5">
-                            <strong class="text-cyan-200">Python</strong>
-                            <p class="mt-2 text-slate-300">
-                                Desafios de programação e análise de dados.
-                            </p>
-                        </div>
-
-                        <div class="border border-cyan-300/20 bg-[#0b2438] p-5">
-                            <strong class="text-cyan-200">GitHub</strong>
-                            <p class="mt-2 text-slate-300">
-                                Organização e compartilhamento de projetos.
-                            </p>
-                        </div>
-
-                        <div class="border border-cyan-300/20 bg-[#0b2438] p-5">
-                            <strong class="text-cyan-200">UX e Acessibilidade</strong>
-                            <p class="mt-2 text-slate-300">
-                                Desenvolvimento de interfaces inclusivas.
-                            </p>
-                        </div>
-
-                        <div class="border border-cyan-300/20 bg-[#0b2438] p-5">
-                            <strong class="text-cyan-200">Computação</strong>
-                            <p class="mt-2 text-slate-300">
-                                Fundamentos da Computação e Pensamento Computacional.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- INTELIGÊNCIA ARTIFICIAL -->
-
-            <section class="py-16 md:py-24">
-
-                <div class="mx-auto grid w-full max-w-7xl gap-10 px-5 md:px-8 lg:grid-cols-2">
-
-                    <div>
-
-                        <p class="font-bold uppercase tracking-[0.18em] text-lime-300">
-                            Novas tecnologias
-                        </p>
-
-                        <h2 class="mt-3 text-3xl font-extrabold text-cyan-50 md:text-4xl">
-                            Inteligência Artificial na Educação
-                        </h2>
-
-                        <div class="mt-6 h-1 w-20 bg-lime-300"></div>
-
-                    </div>
-
-                    <div class="text-lg leading-relaxed text-slate-200">
-
-                        <p>
-                            A Inteligência Artificial tornou-se uma das áreas
-                            importantes da minha formação continuada.
-                        </p>
-
-                        <p class="mt-5">
-                            Entre as capacitações realizadas estão estudos sobre
-                            <strong class="text-cyan-200">
-                                Inteligência Artificial na Educação,
-                                estratégias para resolução de problemas,
-                                técnicas computacionais e uso da IA para
-                                compreender e transformar realidades sociais.
-                            </strong>
-                        </p>
-
-                        <p class="mt-5">
-                            O objetivo é compreender a IA não apenas como uma
-                            ferramenta tecnológica, mas como um recurso que
-                            precisa ser utilizado de maneira
-                            <strong>ética, crítica, responsável e pedagógica.</strong>
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- EDUCAÇÃO INCLUSIVA -->
-
-            <section class="border-y border-cyan-300/15 py-16 md:py-24">
-
-                <div class="mx-auto grid w-full max-w-7xl gap-10 px-5 md:px-8 lg:grid-cols-2">
-
-                    <div>
-
-                        <p class="font-bold uppercase tracking-[0.18em] text-cyan-300">
-                            Inclusão
-                        </p>
-
-                        <h2 class="mt-3 text-3xl font-extrabold text-cyan-50 md:text-4xl">
-                            Acessibilidade e Educação Inclusiva
-                        </h2>
-
-                        <div class="mt-6 h-1 w-20 bg-lime-300"></div>
-
-                    </div>
-
-                    <div class="text-lg leading-relaxed text-slate-200">
-
-                        <p>
-                            A tecnologia deve ser acessível a todos. Por isso,
-                            também fazem parte da minha formação cursos
-                            relacionados à
-                            <strong class="text-cyan-200">
-                                acessibilidade digital, UX e desenvolvimento
-                                de interfaces inclusivas.
-                            </strong>
-                        </p>
-
-                        <p class="mt-5">
-                            Esses conhecimentos contribuem para a construção
-                            de experiências educacionais e digitais mais
-                            inclusivas, considerando diferentes necessidades
-                            e contextos de aprendizagem.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- EDUCAÇÃO DIGITAL NA PRÁTICA -->
-
-            <section class="py-16 md:py-24">
-
-                <div class="mx-auto w-full max-w-7xl px-5 md:px-8">
-
-                    <div class="mx-auto max-w-4xl text-center">
-
-                        <p class="font-bold uppercase tracking-[0.18em] text-lime-300">
-                            Minha prática
-                        </p>
-
-                        <h2 class="mt-3 text-3xl font-extrabold text-cyan-50 md:text-4xl">
-                            Educação Digital na prática
-                        </h2>
-
-                        <div class="mx-auto mt-6 h-1 w-20 bg-lime-300"></div>
-
-                    </div>
-
-                    <div class="mx-auto mt-10 max-w-4xl text-center text-lg leading-relaxed text-slate-200">
-
-                        <p>
-                            Acredito que ensinar tecnologia não significa apenas
-                            ensinar a utilizar ferramentas digitais.
-                        </p>
-
-                        <p class="mt-5">
-                            A <strong class="text-cyan-200">Educação Digital</strong>
-                            envolve desenvolver nos estudantes a capacidade de
-                            compreender, criar, programar, analisar, questionar
-                            e utilizar a tecnologia de forma consciente.
-                        </p>
-
-                        <p class="mt-5">
-                            Por isso, meu trabalho busca integrar:
-                        </p>
-
-                    </div>
-
-
-                    <div class="mx-auto mt-10 grid max-w-5xl gap-4 md:grid-cols-2 lg:grid-cols-4">
-
-                        <div class="border border-cyan-300/30 bg-cyan-300/10 p-5 text-center font-bold text-cyan-100">
-                            Educação
-                        </div>
-
-                        <div class="border border-cyan-300/30 bg-cyan-300/10 p-5 text-center font-bold text-cyan-100">
-                            Computação
-                        </div>
-
-                        <div class="border border-cyan-300/30 bg-cyan-300/10 p-5 text-center font-bold text-cyan-100">
-                            Programação
-                        </div>
-
-                        <div class="border border-cyan-300/30 bg-cyan-300/10 p-5 text-center font-bold text-cyan-100">
-                            Inteligência Artificial
-                        </div>
-
-                    </div>
-
-                    <div class="mx-auto mt-8 max-w-4xl text-center text-lg leading-relaxed text-slate-200">
-
-                        <p>
-                            A proposta é transformar o estudante de
-                            <strong class="text-lime-300">
-                                consumidor de tecnologia em criador de soluções
-                            </strong>,
-                            utilizando conhecimentos digitais para compreender
-                            problemas reais e desenvolver projetos que possam
-                            contribuir para a sociedade.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- FORMAÇÃO CONTINUADA -->
-
-            <section class="border-y border-cyan-300/15 py-16 md:py-24">
-
-                <div class="mx-auto w-full max-w-7xl px-5 md:px-8">
-
-                    <div class="max-w-4xl">
-
-                        <p class="font-bold uppercase tracking-[0.18em] text-cyan-300">
-                            Cursos e capacitações
-                        </p>
-
-                        <h2 class="mt-3 text-3xl font-extrabold text-cyan-50 md:text-4xl">
-                            Formação Continuada
-                        </h2>
-
-                        <div class="mt-6 h-1 w-20 bg-lime-300"></div>
-
-                        <p class="mt-8 text-lg leading-relaxed text-slate-200">
-                            Minha formação continuada reúne centenas de horas
-                            de cursos e capacitações, especialmente nas áreas
-                            de Computação, Educação Digital, Programação,
-                            Inteligência Artificial, Desenvolvimento Web,
-                            Acessibilidade, Ciência de Dados e formação docente.
-                        </p>
-
-                    </div>
-
-
-                    <!-- DESTAQUE -->
-
-                    <div class="mt-10 border border-lime-300/40 bg-lime-300/10 p-8">
-
-                        <div class="flex items-center gap-4">
-
-                            <span class="flex h-12 w-12 items-center justify-center rounded-full bg-lime-300 text-[#071827]">
-                                <i data-lucide="graduation-cap"></i>
-                            </span>
-
-                            <div>
-
-                                <h3 class="text-2xl font-extrabold text-cyan-50">
-                                    Formação em Tecnologia
-                                </h3>
-
-                                <p class="mt-1 text-slate-300">
-                                    Cursos técnicos e formações para professores.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- CURSOS DESTAQUE -->
-
-                    <div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-
-                        <div class="course-item">
-                            <strong>Front-end</strong>
-                            <span>HTML e CSS — 8h</span>
-                        </div>
-
-                        <div class="course-item">
-                            <strong>Scratch</strong>
-                            <span>Programação criativa — 6h</span>
-                        </div>
-
-                        <div class="course-item">
-                            <strong>JavaScript para Web</strong>
-                            <span>Criação de páginas dinâmicas — 10h</span>
-                        </div>
-
-                        <div class="course-item">
-                            <strong>Lógica de Programação</strong>
-                            <span>Desenvolvimento de jogos e projetos</span>
-                        </div>
-
-                        <div class="course-item">
-                            <strong>Python</strong>
-                            <span>Desafios e análise de dados</span>
-                        </div>
-
-                        <div class="course-item">
-                            <strong>Inteligência Artificial</strong>
-                            <span>Estratégias para resolução de problemas</span>
-                        </div>
-
-                        <div class="course-item">
-                            <strong>Ciência de Dados</strong>
-                            <span>Análise de dados com Python</span>
-                        </div>
-
-                        <div class="course-item">
-                            <strong>UX e Acessibilidade</strong>
-                            <span>Interfaces inclusivas</span>
-                        </div>
-
-                        <div class="course-item">
-                            <strong>Computação na Educação Básica</strong>
-                            <span>Formação docente</span>
-                        </div>
-
-                        <div class="course-item">
-                            <strong>Educação Midiática</strong>
-                            <span>Mídias digitais e educação</span>
-                        </div>
-
-                        <div class="course-item">
-                            <strong>Agrinho</strong>
-                            <span>Projetos de desenvolvimento Front-End</span>
-                        </div>
-
-                        <div class="course-item">
-                            <strong>Flashcards de Estudo</strong>
-                            <span>HTML e CSS</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- FRASE FINAL -->
-
-            <section class="py-16 md:py-24">
-
-                <div class="mx-auto max-w-4xl px-5 text-center md:px-8">
-
-                    <span class="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-lime-300/50 bg-lime-300/10 text-lime-300">
-                        <i data-lucide="lightbulb" width="30" height="30"></i>
-                    </span>
-
-                    <h2 class="mt-8 text-3xl font-extrabold text-cyan-50 md:text-4xl">
-                        Um compromisso com a Educação Digital
-                    </h2>
-
-                    <p class="mt-6 text-lg leading-relaxed text-slate-200">
-                        Minha trajetória de formação representa um compromisso
-                        permanente com a aprendizagem e com a busca por novas
-                        possibilidades para a educação.
-                    </p>
-
-                    <p class="mt-5 text-lg leading-relaxed text-slate-200">
-                        Acredito que a escola tem um papel fundamental na formação
-                        de cidadãos capazes de compreender as tecnologias,
-                        participar da cultura digital e criar soluções para os
-                        desafios do presente e do futuro.
-                    </p>
-
-                    <p class="mt-8 text-xl font-bold text-lime-300">
-                        “Aprender, criar, programar e transformar.”
-                    </p>
-
-                    <p class="mt-6 font-bold text-cyan-100">
-                        Profª Elaine Lourenço
-                    </p>
-
-                </div>
-
-            </section>
-
-        </main>
-
-
-        <!-- =========================
-             RODAPÉ
-        ========================== -->
-
-        <footer class="w-full bg-[#06131f]">
-
-            <div class="mx-auto flex w-full max-w-7xl flex-col gap-3 px-5 py-7 md:flex-row md:items-center md:justify-between md:px-8">
-
-                <p class="font-bold text-cyan-100">
-                    Profª Elaine Lourenço
-                </p>
-
-                <p class="text-slate-400">
-                    Educação Digital • Computação • Programação • Inteligência Artificial
+                <p>
+                    Colégio Estadual Professor Gabriel Rosa
                 </p>
 
             </div>
 
-        </footer>
-
-    </div>
+        </div>
 
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+        <nav class="menu">
+
+            <a href="index.html">
+                Início
+            </a>
+
+            <a href="educacaodigital.html">
+                Educação Digital
+            </a>
+
+            <a href="programacao.html">
+                Programação
+            </a>
+
+            <a href="tecnociencia.html">
+                Tecnociência
+            </a>
+
+            <a href="robotica.html">
+                Robótica
+            </a>
+
+        </nav>
+
+
+        <button
+            class="botao-menu"
+            id="botaoMenu"
+            type="button">
+
+            ☰
+
+        </button>
+
+    </header>
+
+
+    <!-- ==============================
+         CONTEÚDO
+    =============================== -->
+
+    <main>
+
+
+        <section class="hero">
+
+            <div class="hero-conteudo">
+
+                <span class="etiqueta">
+                    EDUCAÇÃO DIGITAL
+                </span>
+
+
+                <h2>
+
+                    Educação
+
+                    <span>
+                        Digital
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    A Educação Digital envolve o uso consciente,
+                    crítico, seguro e criativo das tecnologias
+                    digitais no processo de aprendizagem.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             APRESENTAÇÃO
+        =============================== -->
+
+        <section class="secao">
+
+            <div class="titulo-secao">
+
+                <span>
+                    01
+                </span>
+
+                <h2>
+                    Educação Digital
+                </h2>
+
+            </div>
+
+
+            <div class="conteudo-area">
+
+
+                <div class="icone-area">
+
+                    💻
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Tecnologia e aprendizagem
+                    </h3>
+
+
+                    <p>
+
+                        A Educação Digital possibilita que os
+                        estudantes desenvolvam conhecimentos e
+                        habilidades para utilizar as tecnologias
+                        de maneira responsável, crítica e criativa.
+
+                    </p>
+
+
+                    <p>
+
+                        No ambiente escolar, os recursos digitais
+                        podem ser utilizados para pesquisar,
+                        produzir conteúdos, resolver problemas,
+                        programar e compartilhar conhecimentos.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             ÁREAS
+        =============================== -->
+
+        <section class="secao secao-azul">
+
+            <div class="titulo-secao">
+
+                <span>
+                    02
+                </span>
+
+                <h2>
+                    Áreas de aprendizagem
+                </h2>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <article>
+
+                    <span>
+                        🔎
+                    </span>
+
+                    <h4>
+                        Pesquisa Digital
+                    </h4>
+
+                    <p>
+
+                        Pesquisa, seleção e análise de
+                        informações disponíveis na internet.
+
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        🧠
+                    </span>
+
+                    <h4>
+                        Pensamento Computacional
+                    </h4>
+
+                    <p>
+
+                        Desenvolvimento do raciocínio lógico
+                        e da capacidade de solucionar problemas.
+
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        🤖
+                    </span>
+
+                    <h4>
+                        Inteligência Artificial
+                    </h4>
+
+                    <p>
+
+                        Compreensão das possibilidades e dos
+                        desafios relacionados à inteligência artificial.
+
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        🌐
+                    </span>
+
+                    <h4>
+                        Cidadania Digital
+                    </h4>
+
+                    <p>
+
+                        Uso ético, responsável e seguro
+                        das tecnologias digitais.
+
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        ♿
+                    </span>
+
+                    <h4>
+                        Acessibilidade
+                    </h4>
+
+                    <p>
+
+                        Desenvolvimento de tecnologias e
+                        interfaces mais inclusivas.
+
+                    </p>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        💡
+                    </span>
+
+                    <h4>
+                        Criatividade
+                    </h4>
+
+                    <p>
+
+                        Utilização da tecnologia para criação
+                        de projetos e soluções inovadoras.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             PROFESSORA
+        =============================== -->
+
+        <section class="secao">
+
+            <div class="titulo-secao">
+
+                <span>
+                    03
+                </span>
+
+                <h2>
+                    Professora Elaine Lourenço
+                </h2>
+
+            </div>
+
+
+            <div class="sobre-texto">
+
+                <p>
+
+                    Professora Elaine Lourenço é graduada em
+                    Ciências Sociais pela Universidade Estadual
+                    de Londrina – UEL, em História pela Universidade
+                    Leonardo da Vinci e acadêmica do curso de
+                    Licenciatura em Informática.
+
+                </p>
+
+
+                <p>
+
+                    Possui Pós-Graduação em Libras Português e
+                    Educação do Campo pelo Dom Bosco, além de
+                    cursos e formações relacionados à tecnologia,
+                    programação e educação digital.
+
+                </p>
+
+
+                <p>
+
+                    Na área de tecnologia, desenvolve atividades
+                    relacionadas à programação, educação digital,
+                    inteligência artificial, tecnociência e robótica,
+                    buscando aproximar os estudantes das novas
+                    tecnologias e de suas possibilidades educacionais.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <div class="copyright">
+
+            <p>
+                Educação Digital – Ciência & Tecnologia
+            </p>
+
+            <p>
+                Colégio Estadual Professor Gabriel Rosa
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+<script src="script.js"></script>
 
 </body>
 

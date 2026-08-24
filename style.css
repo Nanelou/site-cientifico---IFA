@@ -3,52 +3,66 @@
 ========================================================= */
 
 :root {
-    --ink: #071827;
-    --ink-soft: #0b2438;
-    --cyan: #32d7e2;
-    --lime: #d9f75b;
-    --paper: #edf8f7;
-    --text-soft: #c9d9df;
-    --border: rgba(50, 215, 226, 0.20);
+    --azul-escuro: #071827;
+    --azul: #0b2438;
+    --azul-claro: #123b54;
+
+    --ciano: #32d7e2;
+    --verde: #d9f75b;
+
+    --branco: #edf8f7;
+    --texto: #c9d9df;
+
+    --borda: rgba(50, 215, 226, 0.25);
+
+    --sombra: rgba(0, 0, 0, 0.30);
 }
 
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
 
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
-    margin: 0;
     width: 100%;
     min-height: 100vh;
 
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
-    color: var(--paper);
-    background: var(--ink);
+    color: var(--branco);
+
+    background: var(--azul-escuro);
 
     line-height: 1.7;
 }
 
 
 /* =========================================================
-   FUNDO
+   FUNDO DO SITE
 ========================================================= */
 
 .site-shell {
+
     width: 100%;
     min-height: 100vh;
 
     overflow: hidden;
 
     background-image:
+
         linear-gradient(
             rgba(50, 215, 226, 0.045) 1px,
             transparent 1px
         ),
+
         linear-gradient(
             90deg,
             rgba(50, 215, 226, 0.045) 1px,
@@ -64,26 +78,32 @@ body {
 ========================================================= */
 
 .cabecalho {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 
     width: 100%;
 
-    padding: 15px 6%;
+    min-height: 100px;
+
+    padding: 15px 5%;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
-    gap: 30px;
+    gap: 25px;
 
-    background: rgba(7, 24, 39, 0.97);
+    background:
+        rgba(7, 24, 39, 0.98);
 
     border-bottom:
-        1px solid var(--border);
+        1px solid var(--borda);
 
-    backdrop-filter: blur(10px);
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
 }
 
 
@@ -92,6 +112,7 @@ body {
 ========================================================= */
 
 .logo {
+
     display: flex;
 
     align-items: center;
@@ -99,11 +120,15 @@ body {
     justify-content: center;
 
     gap: 15px;
+
+    flex-shrink: 0;
 }
 
 
 .logo img {
+
     width: 70px;
+
     height: 70px;
 
     object-fit: contain;
@@ -111,25 +136,27 @@ body {
     border-radius: 50%;
 
     border:
-        2px solid var(--cyan);
+        2px solid var(--ciano);
 
     background:
-        rgba(50, 215, 226, 0.08);
+        var(--azul);
 }
 
 
 .logo-texto {
+
     text-align: center;
 }
 
 
 .logo-texto h1 {
+
     margin: 0;
 
-    color: var(--cyan);
+    color: var(--ciano);
 
     font-size:
-        clamp(1.8rem, 3vw, 2.8rem);
+        clamp(1.4rem, 2.5vw, 2.4rem);
 
     font-weight: 800;
 
@@ -138,13 +165,14 @@ body {
 
 
 .logo-texto p {
-    margin: 5px 0 0;
 
-    color: var(--paper);
+    margin-top: 5px;
+
+    color: var(--branco);
+
+    font-size: 0.9rem;
 
     text-align: center;
-
-    font-size: 1rem;
 }
 
 
@@ -153,70 +181,85 @@ body {
 ========================================================= */
 
 .menu {
+
     display: flex;
 
     align-items: center;
 
     justify-content: center;
 
-    gap: 28px;
+    gap: 25px;
 }
 
 
 .menu a {
+
     position: relative;
 
-    color: var(--paper);
+    padding: 8px 0;
+
+    color: var(--branco);
 
     text-decoration: none;
 
-    font-weight: 700;
+    font-size: 0.95rem;
 
-    transition: 0.2s;
+    font-weight: bold;
+
+    text-align: center;
+
+    transition:
+        color 0.3s ease;
 }
 
 
 .menu a:hover {
-    color: var(--lime);
+
+    color: var(--verde);
 }
 
 
 .menu a::after {
+
     content: "";
 
     position: absolute;
 
     left: 0;
 
-    bottom: -7px;
+    bottom: 0;
 
     width: 0;
 
     height: 2px;
 
-    background: var(--lime);
+    background:
+        var(--verde);
 
-    transition: 0.2s;
+    transition:
+        width 0.3s ease;
 }
 
 
 .menu a:hover::after {
+
     width: 100%;
 }
 
 
 /* =========================================================
-   BOTÃO MOBILE
+   BOTÃO MENU CELULAR
 ========================================================= */
 
 .botao-menu {
+
     display: none;
 
     border: none;
 
     background: transparent;
 
-    color: var(--cyan);
+    color: var(--ciano);
 
     font-size: 2rem;
 
@@ -225,12 +268,21 @@ body {
 
 
 /* =========================================================
+   CONTEÚDO PRINCIPAL
+========================================================= */
+
+main {
+
+    width: 100%;
+}
+
+
+/* =========================================================
    SEÇÕES
 ========================================================= */
 
-.secao,
-.hero,
-.projeto {
+.secao {
+
     width: 100%;
 
     padding:
@@ -238,11 +290,180 @@ body {
 }
 
 
+.secao-azul {
+
+    background:
+        rgba(11, 36, 56, 0.75);
+}
+
+
+.secao-verde {
+
+    background:
+        rgba(30, 55, 20, 0.35);
+}
+
+
 /* =========================================================
-   TÍTULOS
+   PÁGINA INICIAL / HERO
+========================================================= */
+
+.hero {
+
+    width: 100%;
+
+    min-height: 75vh;
+
+    padding:
+        80px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 50px;
+
+    text-align: center;
+}
+
+
+.hero-conteudo {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.etiqueta {
+
+    display: inline-block;
+
+    padding:
+        7px 16px;
+
+    color: var(--verde);
+
+    border:
+        1px solid rgba(217, 247, 91, 0.5);
+
+    font-size: 0.85rem;
+
+    font-weight: bold;
+
+    letter-spacing: 0.15em;
+
+    text-align: center;
+}
+
+
+.hero h2 {
+
+    margin:
+        25px 0;
+
+    color: var(--branco);
+
+    font-size:
+        clamp(3rem, 7vw, 6rem);
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    text-align: center;
+}
+
+
+.hero h2 span {
+
+    display: block;
+
+    color: var(--ciano);
+}
+
+
+.hero p {
+
+    max-width: 800px;
+
+    margin:
+        25px auto;
+
+    color: var(--texto);
+
+    font-size: 1.15rem;
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   CARD DA PÁGINA INICIAL
+========================================================= */
+
+.hero-card {
+
+    width: 100%;
+
+    max-width: 350px;
+
+    padding: 30px;
+
+    background:
+        rgba(11, 36, 56, 0.90);
+
+    border:
+        1px solid var(--borda);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 15px 40px var(--sombra);
+
+    text-align: center;
+}
+
+
+.hero-card h3 {
+
+    margin:
+        15px 0;
+
+    color: var(--ciano);
+
+    text-align: center;
+}
+
+
+.hero-card p {
+
+    color: var(--texto);
+
+    text-align: justify;
+}
+
+
+.icone-ciencia {
+
+    font-size: 4rem;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   TÍTULOS DAS SEÇÕES
 ========================================================= */
 
 .titulo-secao {
+
     width: 100%;
 
     margin-bottom: 45px;
@@ -252,27 +473,33 @@ body {
 
 
 .titulo-secao span {
+
     display: block;
 
     margin-bottom: 8px;
 
-    color: var(--lime);
+    color: var(--verde);
 
-    font-weight: 800;
+    font-size: 1rem;
 
-    letter-spacing: 0.2em;
+    font-weight: bold;
+
+    letter-spacing: 0.25em;
+
+    text-align: center;
 }
 
 
 .titulo-secao h2 {
-    margin: 0;
 
-    color: var(--cyan);
+    color: var(--ciano);
 
     font-size:
         clamp(2rem, 5vw, 3.5rem);
 
     font-weight: 800;
+
+    line-height: 1.2;
 
     text-align: center;
 }
@@ -283,174 +510,40 @@ body {
 ========================================================= */
 
 p {
+
+    color: var(--texto);
+
     text-align: justify;
 }
 
 
-h1,
-h2,
-h3,
-h4 {
-    line-height: 1.2;
-}
+.sobre-texto {
 
-
-/* =========================================================
-   PÁGINA INICIAL
-========================================================= */
-
-.hero {
-    min-height: 78vh;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 55px;
-
-    text-align: center;
-}
-
-
-.hero-conteudo {
-    width: 100%;
-
-    max-width: 850px;
+    max-width: 1100px;
 
     margin: auto;
+}
+
+
+.sobre-texto h3 {
+
+    margin-bottom: 25px;
+
+    color: var(--ciano);
+
+    font-size: 1.8rem;
 
     text-align: center;
 }
 
 
-.etiqueta {
-    display: inline-block;
+.sobre-texto p {
 
-    padding: 7px 14px;
+    margin-bottom: 18px;
 
-    color: var(--lime);
-
-    border:
-        1px solid rgba(217, 247, 91, 0.45);
-
-    font-weight: 800;
-
-    letter-spacing: 0.15em;
-}
-
-
-.hero h2 {
-    margin: 20px 0;
-
-    color: var(--paper);
-
-    font-size:
-        clamp(3rem, 7vw, 6.5rem);
-
-    font-weight: 800;
-
-    line-height: 1;
-
-    text-align: center;
-}
-
-
-.hero h2 span {
-    display: block;
-
-    color: var(--cyan);
-}
-
-
-.hero p {
-    max-width: 780px;
-
-    margin:
-        28px auto;
-
-    color: var(--text-soft);
-
-    font-size: 1.2rem;
+    font-size: 1.08rem;
 
     text-align: justify;
-}
-
-
-/* =========================================================
-   CARD PRINCIPAL
-========================================================= */
-
-.hero-card {
-    max-width: 350px;
-
-    padding: 30px;
-
-    background:
-        rgba(11, 36, 56, 0.85);
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 16px;
-
-    text-align: center;
-}
-
-
-.hero-card h3 {
-    color: var(--cyan);
-
-    text-align: center;
-}
-
-
-.hero-card p {
-    text-align: justify;
-}
-
-
-.icone-ciencia {
-    font-size: 4rem;
-
-    text-align: center;
-}
-
-
-/* =========================================================
-   BOTÃO
-========================================================= */
-
-.botao {
-    display: inline-block;
-
-    margin-top: 15px;
-
-    padding:
-        13px 24px;
-
-    color: var(--ink);
-
-    background: var(--lime);
-
-    border:
-        2px solid var(--lime);
-
-    border-radius: 6px;
-
-    font-weight: 800;
-
-    text-decoration: none;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-
-.botao:hover {
-    transform: translateY(-3px);
 }
 
 
@@ -459,6 +552,9 @@ h4 {
 ========================================================= */
 
 .sobre-grid {
+
+    width: 100%;
+
     max-width: 1200px;
 
     margin: auto;
@@ -469,32 +565,17 @@ h4 {
         1.3fr 0.7fr;
 
     gap: 50px;
-}
 
-
-.sobre-texto h3 {
-    color: var(--cyan);
-
-    text-align: center;
-
-    font-size: 1.8rem;
-}
-
-
-.sobre-texto p {
-    color: var(--text-soft);
-
-    font-size: 1.08rem;
-
-    text-align: justify;
+    align-items: start;
 }
 
 
 /* =========================================================
-   INFORMAÇÕES
+   CARDS DE INFORMAÇÃO
 ========================================================= */
 
 .informacoes {
+
     display: grid;
 
     gap: 18px;
@@ -502,68 +583,71 @@ h4 {
 
 
 .info-card {
+
     padding: 22px;
 
     display: flex;
 
     align-items: center;
 
+    justify-content: center;
+
     gap: 15px;
 
     background:
-        var(--ink-soft);
+        var(--azul);
 
     border:
-        1px solid var(--border);
+        1px solid var(--borda);
 
     border-radius: 12px;
 
-    transition: 0.25s;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
 
 .info-card:hover {
-    transform: translateY(-5px);
+
+    transform:
+        translateY(-5px);
 
     border-color:
-        var(--lime);
+        var(--verde);
 }
 
 
 .info-card > span {
-    font-size: 2rem;
+
+    font-size: 2.2rem;
 }
 
 
 .info-card h4 {
-    margin: 0;
 
-    color: var(--cyan);
+    color: var(--ciano);
 
     text-align: center;
 }
 
 
 .info-card p {
-    margin: 0;
 
-    color: var(--text-soft);
+    margin: 0;
 
     text-align: center;
 }
 
 
 /* =========================================================
-   EDUCAÇÃO DIGITAL
+   ÁREA DE CONTEÚDO
 ========================================================= */
 
-.secao-azul {
-    background:
-        rgba(11, 36, 56, 0.72);
-}
-
-
 .conteudo-area {
+
+    width: 100%;
+
     max-width: 1200px;
 
     margin: auto;
@@ -571,31 +655,16 @@ h4 {
     display: grid;
 
     grid-template-columns:
-        120px 1fr;
+        130px 1fr;
 
     gap: 35px;
-}
 
-
-.conteudo-area h3 {
-    color: var(--cyan);
-
-    text-align: center;
-
-    font-size: 1.8rem;
-}
-
-
-.conteudo-area p {
-    color: var(--text-soft);
-
-    text-align: justify;
-
-    font-size: 1.08rem;
+    align-items: center;
 }
 
 
 .icone-area {
+
     display: flex;
 
     align-items: center;
@@ -603,6 +672,30 @@ h4 {
     justify-content: center;
 
     font-size: 5rem;
+
+    text-align: center;
+}
+
+
+.conteudo-area h3 {
+
+    margin-bottom: 20px;
+
+    color: var(--ciano);
+
+    font-size: 1.8rem;
+
+    text-align: center;
+}
+
+
+.conteudo-area p {
+
+    margin-bottom: 18px;
+
+    font-size: 1.08rem;
+
+    text-align: justify;
 }
 
 
@@ -611,56 +704,92 @@ h4 {
 ========================================================= */
 
 .cards {
-    margin-top: 35px;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
 
     display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 20px;
+    gap: 25px;
 }
 
 
 .cards article {
-    padding: 25px;
 
-    background: var(--ink);
+    min-height: 220px;
+
+    padding: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    background:
+        var(--azul);
 
     border:
-        1px solid var(--border);
+        1px solid var(--borda);
 
-    border-radius: 12px;
+    border-radius: 15px;
 
-    text-align: center;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
 
-    transition: 0.25s;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
 .cards article:hover {
+
     transform:
-        translateY(-7px);
+        translateY(-8px);
 
     border-color:
-        var(--lime);
+        var(--verde);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.25);
 }
 
 
 .cards article span {
-    font-size: 2.2rem;
-}
 
+    margin-bottom: 10px;
 
-.cards h4 {
-    color: var(--cyan);
+    font-size: 2.5rem;
 
     text-align: center;
 }
 
 
-.cards p {
-    color: var(--text-soft);
+.cards article h4 {
+
+    margin-bottom: 12px;
+
+    color: var(--ciano);
+
+    font-size: 1.3rem;
+
+    text-align: center;
+}
+
+
+.cards article p {
+
+    width: 100%;
 
     text-align: justify;
 }
@@ -671,6 +800,9 @@ h4 {
 ========================================================= */
 
 .tecnociencia {
+
+    width: 100%;
+
     max-width: 1200px;
 
     margin: auto;
@@ -680,19 +812,23 @@ h4 {
     grid-template-columns:
         1fr 1fr;
 
-    gap: 60px;
+    gap: 50px;
 }
 
 
 .texto-tecnociencia h3 {
-    color: var(--cyan);
+
+    margin-bottom: 20px;
+
+    color: var(--ciano);
 
     text-align: center;
 }
 
 
 .texto-tecnociencia p {
-    color: var(--text-soft);
+
+    margin-bottom: 18px;
 
     text-align: justify;
 }
@@ -703,6 +839,7 @@ h4 {
 ========================================================= */
 
 .linha-tempo {
+
     display: grid;
 
     gap: 20px;
@@ -710,41 +847,43 @@ h4 {
 
 
 .linha-tempo div {
+
     padding: 25px;
 
     background:
-        var(--ink-soft);
+        var(--azul);
 
     border:
-        1px solid var(--border);
+        1px solid var(--borda);
 
     border-left:
-        4px solid var(--lime);
+        4px solid var(--verde);
 
-    border-radius: 8px;
+    border-radius: 10px;
 
     text-align: center;
 }
 
 
 .linha-tempo strong {
-    color: var(--lime);
 
-    font-size: 1.6rem;
+    color: var(--verde);
+
+    font-size: 1.5rem;
 }
 
 
 .linha-tempo h4 {
-    color: var(--cyan);
-
-    text-align: center;
 
     margin: 8px 0;
+
+    color: var(--ciano);
+
+    text-align: center;
 }
 
 
 .linha-tempo p {
-    color: var(--text-soft);
 
     text-align: justify;
 }
@@ -754,13 +893,10 @@ h4 {
    ROBÓTICA
 ========================================================= */
 
-.secao-verde {
-    background:
-        rgba(35, 55, 20, 0.35);
-}
-
-
 .robotica-grid {
+
+    width: 100%;
+
     max-width: 1200px;
 
     margin: auto;
@@ -777,6 +913,7 @@ h4 {
 
 
 .robo-ilustracao {
+
     display: flex;
 
     align-items: center;
@@ -784,107 +921,124 @@ h4 {
     justify-content: center;
 
     font-size: 8rem;
+
+    text-align: center;
 }
 
 
 .robotica-texto {
+
     text-align: center;
 }
 
 
 .robotica-texto h3 {
-    color: var(--cyan);
+
+    margin-bottom: 20px;
+
+    color: var(--ciano);
+
+    font-size: 1.8rem;
 
     text-align: center;
 }
 
 
 .robotica-texto p {
-    color: var(--text-soft);
+
+    margin-bottom: 18px;
 
     text-align: justify;
 }
 
 
 /* =========================================================
-   HABILIDADES
+   HABILIDADES DA ROBÓTICA
 ========================================================= */
 
 .habilidades {
+
+    margin-top: 25px;
+
     display: flex;
 
     flex-wrap: wrap;
 
+    align-items: center;
+
     justify-content: center;
 
     gap: 10px;
-
-    margin-top: 25px;
 }
 
 
 .habilidades span {
-    padding:
-        8px 14px;
 
-    color: var(--ink);
+    padding:
+        8px 15px;
+
+    color: var(--azul-escuro);
 
     background:
-        var(--lime);
+        var(--verde);
 
     border-radius: 20px;
 
-    font-weight: 700;
+    font-size: 0.9rem;
+
+    font-weight: bold;
+
+    text-align: center;
 }
 
 
 /* =========================================================
-   PROJETO FINAL
+   BOTÕES
 ========================================================= */
 
-.projeto {
-    display: flex;
+.botao {
 
-    justify-content: center;
+    display: inline-block;
 
-    text-align: center;
+    margin-top: 15px;
+
+    padding:
+        13px 25px;
+
+    color: var(--azul-escuro);
 
     background:
-        linear-gradient(
-            135deg,
-            #0b2438,
-            #071827
-        );
-}
+        var(--verde);
 
+    border:
+        2px solid var(--verde);
 
-.projeto-conteudo {
-    width: 100%;
+    border-radius: 7px;
 
-    max-width: 850px;
+    font-weight: bold;
 
-    margin: auto;
+    text-decoration: none;
 
     text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
 }
 
 
-.projeto h2 {
-    color: var(--paper);
+.botao:hover {
 
-    font-size:
-        clamp(2.2rem, 5vw, 4.2rem);
+    transform:
+        translateY(-3px);
 
-    text-align: center;
-}
+    background:
+        var(--ciano);
 
-
-.projeto p {
-    color: var(--text-soft);
-
-    font-size: 1.15rem;
-
-    text-align: justify;
+    border-color:
+        var(--ciano);
 }
 
 
@@ -893,14 +1047,24 @@ h4 {
 ========================================================= */
 
 footer {
-    padding:
-        50px 7% 20px;
 
-    background: #06131f;
+    width: 100%;
+
+    padding:
+        45px 7% 20px;
+
+    background:
+        #06131f;
+
+    border-top:
+        1px solid var(--borda);
 }
 
 
 .footer-conteudo {
+
+    width: 100%;
+
     max-width: 1200px;
 
     margin: auto;
@@ -910,7 +1074,7 @@ footer {
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 35px;
+    gap: 30px;
 
     text-align: center;
 }
@@ -918,150 +1082,428 @@ footer {
 
 .footer-conteudo h3,
 .footer-conteudo h4 {
-    color: var(--cyan);
+
+    margin-bottom: 10px;
+
+    color: var(--ciano);
 
     text-align: center;
 }
 
 
 .footer-conteudo p {
-    color: var(--text-soft);
 
     text-align: center;
 }
 
 
 .copyright {
+
+    width: 100%;
+
     max-width: 1200px;
 
     margin:
-        30px auto 0;
+        25px auto 0;
 
     padding-top: 20px;
 
     border-top:
-        1px solid var(--border);
+        1px solid var(--borda);
 
     text-align: center;
 }
 
 
+.copyright p {
+
+    margin: 5px 0;
+
+    color: var(--texto);
+
+    text-align: center;
+
+    font-size: 0.9rem;
+}
+
+
 /* =========================================================
-   RESPONSIVIDADE
+   ACESSIBILIDADE
 ========================================================= */
 
-@media (max-width: 900px) {
+a:focus-visible,
+button:focus-visible {
 
-    .cabecalho {
-        padding: 12px 5%;
+    outline:
+        3px solid var(--verde);
+
+    outline-offset:
+        4px;
+}
+
+
+/* =========================================================
+   ANIMAÇÃO
+========================================================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+
     }
 
+    to {
 
-    .logo img {
-        width: 58px;
-        height: 58px;
-    }
+        opacity: 1;
 
+        transform:
+            translateY(0);
 
-    .logo-texto h1 {
-        font-size: 1.6rem;
-    }
-
-
-    .logo-texto p {
-        font-size: 0.85rem;
-    }
-
-
-    .botao-menu {
-        display: block;
-    }
-
-
-    .menu {
-        display: none;
-
-        position: absolute;
-
-        top: 100%;
-        left: 0;
-
-        width: 100%;
-
-        padding: 25px;
-
-        flex-direction: column;
-
-        background:
-            rgba(7, 24, 39, 0.98);
-
-        border-bottom:
-            1px solid var(--border);
-    }
-
-
-    .menu.ativo {
-        display: flex;
-    }
-
-
-    .hero {
-        flex-direction: column;
-    }
-
-
-    .sobre-grid,
-    .tecnociencia,
-    .robotica-grid,
-    .conteudo-area {
-        grid-template-columns: 1fr;
-    }
-
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-
-    .footer-conteudo {
-        grid-template-columns: 1fr;
     }
 
 }
 
 
-@media (max-width: 600px) {
+/* =========================================================
+   TABLETS
+========================================================= */
 
-    .secao,
-    .hero,
-    .projeto {
+@media (max-width: 1000px) {
+
+    .cabecalho {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .menu {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .hero {
+
+        flex-direction: column;
+
+    }
+
+
+    .sobre-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .tecnociencia {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .robotica-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .footer-conteudo {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .cabecalho {
+
+        min-height: 80px;
+
         padding:
-            60px 5%;
+            10px 5%;
+
+        flex-wrap: nowrap;
+
+    }
+
+
+    .logo {
+
+        gap: 10px;
+
+    }
+
+
+    .logo img {
+
+        width: 55px;
+
+        height: 55px;
+
     }
 
 
     .logo-texto h1 {
-        font-size: 1.3rem;
+
+        font-size:
+            1.25rem;
+
     }
 
 
     .logo-texto p {
-        font-size: 0.75rem;
+
+        font-size:
+            0.7rem;
+
+    }
+
+
+    /* MENU */
+
+    .botao-menu {
+
+        display: block;
+
+    }
+
+
+    .menu {
+
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        width: 100%;
+
+        padding:
+            25px;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        background:
+            rgba(7, 24, 39, 0.98);
+
+        border-bottom:
+            1px solid var(--borda);
+
+    }
+
+
+    .menu.ativo {
+
+        display: flex;
+
+    }
+
+
+    .menu a {
+
+        width: 100%;
+
+        padding: 10px;
+
+        text-align: center;
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: auto;
+
+        padding:
+            70px 5%;
+
     }
 
 
     .hero h2 {
-        font-size: 2.8rem;
+
+        font-size:
+            2.8rem;
+
     }
 
 
-    .hero p,
-    .sobre-texto p,
-    .conteudo-area p,
-    .texto-tecnociencia p,
-    .robotica-texto p,
-    .projeto p {
-        text-align: justify;
+    .hero p {
+
+        font-size:
+            1rem;
+
+        text-align:
+            justify;
+
+    }
+
+
+    /* SEÇÕES */
+
+    .secao {
+
+        padding:
+            60px 5%;
+
+    }
+
+
+    .titulo-secao {
+
+        margin-bottom:
+            35px;
+
+    }
+
+
+    .titulo-secao h2 {
+
+        font-size:
+            2rem;
+
+    }
+
+
+    /* CONTEÚDO */
+
+    .conteudo-area {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .icone-area {
+
+        font-size:
+            4rem;
+
+    }
+
+
+    /* CARDS */
+
+    .cards {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .cards article {
+
+        min-height:
+            auto;
+
+    }
+
+
+    /* ROBÓTICA */
+
+    .robo-ilustracao {
+
+        font-size:
+            6rem;
+
+    }
+
+
+    /* RODAPÉ */
+
+    footer {
+
+        padding:
+            40px 5% 20px;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR PEQUENO
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .logo-texto h1 {
+
+        font-size:
+            1.05rem;
+
+    }
+
+
+    .logo-texto p {
+
+        display: none;
+
+    }
+
+
+    .hero h2 {
+
+        font-size:
+            2.3rem;
+
+    }
+
+
+    .etiqueta {
+
+        font-size:
+            0.7rem;
+
+    }
+
+
+    .titulo-secao h2 {
+
+        font-size:
+            1.8rem;
+
     }
 
 }
