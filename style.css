@@ -1,11 +1,12 @@
 /* =========================================================
    CIÊNTIFICANDO COM IFAS
    COLÉGIO ESTADUAL PROFESSOR GABRIEL ROSA
+   CURIÚVA - PARANÁ
    ========================================================= */
 
 
 /* =========================================================
-   VARIÁVEIS
+   1. VARIÁVEIS
    ========================================================= */
 
 :root {
@@ -21,21 +22,19 @@
     --texto: #c9d9df;
 
     --borda: rgba(50, 215, 226, 0.25);
-
     --sombra: rgba(0, 0, 0, 0.30);
 
 }
 
 
 /* =========================================================
-   RESET
+   2. RESET
    ========================================================= */
 
 * {
 
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
 
 }
@@ -60,7 +59,8 @@ body {
 
     color: var(--branco);
 
-    background: var(--azul-escuro);
+    background:
+        var(--azul-escuro);
 
     line-height: 1.7;
 
@@ -68,7 +68,7 @@ body {
 
 
 /* =========================================================
-   ESTRUTURA
+   3. ESTRUTURA PRINCIPAL
    ========================================================= */
 
 .site-shell {
@@ -78,7 +78,7 @@ body {
 
     overflow: hidden;
 
-    background-image:
+    background:
 
         linear-gradient(
             rgba(7, 24, 39, 0.94),
@@ -100,8 +100,26 @@ body {
 }
 
 
+main {
+
+    width: 100%;
+
+}
+
+
+p {
+
+    color: var(--texto);
+
+    text-align: justify;
+
+    text-justify: inter-word;
+
+}
+
+
 /* =========================================================
-   CABEÇALHO
+   4. CABEÇALHO
    ========================================================= */
 
 .cabecalho {
@@ -110,7 +128,8 @@ body {
 
     min-height: 125px;
 
-    padding: 18px 5%;
+    padding:
+        18px 5%;
 
     display: flex;
 
@@ -120,9 +139,11 @@ body {
 
     gap: 30px;
 
-    background: rgba(7, 24, 39, 0.98);
+    background:
+        rgba(7, 24, 39, 0.98);
 
-    border-bottom: 1px solid var(--borda);
+    border-bottom:
+        1px solid var(--borda);
 
     position: sticky;
 
@@ -134,7 +155,7 @@ body {
 
 
 /* =========================================================
-   LOGO
+   5. LOGO
    ========================================================= */
 
 .logo {
@@ -153,22 +174,28 @@ body {
 .logo img {
 
     width: 82px;
-
     height: 82px;
 
     object-fit: cover;
 
     border-radius: 50%;
 
-    border: 3px solid var(--ciano);
+    border:
+        3px solid var(--ciano);
 
-    background: var(--azul);
+    background:
+        var(--azul);
 
     box-shadow:
-        0 0 20px rgba(50, 215, 226, 0.18);
+        0 0 25px
+        rgba(50, 215, 226, 0.20);
 
 }
 
+
+/* =========================================================
+   6. NOME DO PROJETO
+   ========================================================= */
 
 .logo-texto {
 
@@ -177,23 +204,49 @@ body {
 }
 
 
-/* =========================================================
-   NOME GRANDE DO PROJETO
-   ========================================================= */
-
 .logo-texto h1 {
 
     color: var(--branco);
 
-    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-size:
+        clamp(2rem, 4vw, 3.4rem);
 
     font-weight: 900;
 
-    line-height: 1.05;
+    line-height: 1;
 
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 
     letter-spacing: 1px;
+
+    text-shadow:
+        0 0 18px
+        rgba(50, 215, 226, 0.20);
+
+}
+
+
+/* LINHA DECORATIVA */
+
+.linha-destaque {
+
+    display: block;
+
+    width: 90px;
+
+    height: 4px;
+
+    margin:
+        10px 0;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--ciano),
+            var(--verde)
+        );
 
 }
 
@@ -202,7 +255,7 @@ body {
 
     color: var(--ciano);
 
-    font-size: 1rem;
+    font-size: 0.95rem;
 
     font-weight: 600;
 
@@ -214,7 +267,7 @@ body {
 
 
 /* =========================================================
-   MENU
+   7. MENU
    ========================================================= */
 
 .menu {
@@ -242,11 +295,11 @@ body {
 
     font-weight: 600;
 
+    position: relative;
+
     transition:
         color 0.3s ease,
         transform 0.3s ease;
-
-    position: relative;
 
 }
 
@@ -265,9 +318,11 @@ body {
 
     height: 2px;
 
-    background: var(--ciano);
+    background:
+        var(--ciano);
 
-    transition: width 0.3s ease;
+    transition:
+        width 0.3s ease;
 
 }
 
@@ -276,13 +331,13 @@ body {
 
     color: var(--ciano);
 
-    transform: translateY(-2px);
+    transform:
+        translateY(-2px);
 
 }
 
 
 .menu a:hover::after,
-
 .menu a.ativo::after {
 
     width: 100%;
@@ -298,22 +353,26 @@ body {
 
 
 /* =========================================================
-   BOTÃO MENU MOBILE
+   8. BOTÃO MENU MOBILE
    ========================================================= */
 
 .botao-menu {
 
     display: none;
 
-    border: 1px solid var(--borda);
+    border:
+        1px solid var(--borda);
 
-    background: var(--azul);
+    background:
+        var(--azul);
 
-    color: var(--branco);
+    color:
+        var(--branco);
 
     font-size: 1.6rem;
 
-    padding: 7px 12px;
+    padding:
+        7px 12px;
 
     border-radius: 8px;
 
@@ -323,18 +382,7 @@ body {
 
 
 /* =========================================================
-   MAIN
-   ========================================================= */
-
-main {
-
-    width: 100%;
-
-}
-
-
-/* =========================================================
-   HERO
+   9. HERO / APRESENTAÇÃO
    ========================================================= */
 
 .hero {
@@ -343,7 +391,8 @@ main {
 
     min-height: 75vh;
 
-    padding: 90px 7%;
+    padding:
+        90px 7%;
 
     display: flex;
 
@@ -367,34 +416,18 @@ main {
 }
 
 
-.etiqueta {
-
-    display: inline-block;
-
-    color: var(--verde);
-
-    font-size: 0.9rem;
-
-    font-weight: bold;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 25px;
-
-}
-
-
 .hero h2 {
 
-    font-size: clamp(3rem, 7vw, 6rem);
+    color: var(--branco);
+
+    font-size:
+        clamp(3rem, 7vw, 6rem);
+
+    font-weight: 800;
 
     line-height: 1.02;
 
     margin-bottom: 30px;
-
-    color: var(--branco);
-
-    font-weight: 800;
 
 }
 
@@ -403,7 +436,8 @@ main {
 
     max-width: 850px;
 
-    margin: 25px auto;
+    margin:
+        25px auto;
 
     color: var(--texto);
 
@@ -411,14 +445,8 @@ main {
 
     text-align: justify;
 
-    text-justify: inter-word;
-
 }
 
-
-/* =========================================================
-   BOTÕES
-   ========================================================= */
 
 .botao {
 
@@ -426,15 +454,19 @@ main {
 
     margin-top: 15px;
 
-    padding: 14px 30px;
+    padding:
+        14px 30px;
 
-    border: 1px solid var(--ciano);
+    border:
+        1px solid var(--ciano);
 
     border-radius: 30px;
 
-    color: var(--azul-escuro);
+    color:
+        var(--azul-escuro);
 
-    background: var(--ciano);
+    background:
+        var(--ciano);
 
     text-decoration: none;
 
@@ -449,7 +481,8 @@ main {
 
 .botao:hover {
 
-    transform: translateY(-3px);
+    transform:
+        translateY(-3px);
 
     box-shadow:
         0 10px 25px
@@ -459,14 +492,15 @@ main {
 
 
 /* =========================================================
-   SEÇÕES
+   10. SEÇÕES
    ========================================================= */
 
 .secao {
 
     width: 100%;
 
-    padding: 85px 7%;
+    padding:
+        85px 7%;
 
 }
 
@@ -474,21 +508,24 @@ main {
 .secao-azul {
 
     background:
+
         linear-gradient(
             135deg,
             rgba(11, 36, 56, 0.95),
             rgba(18, 59, 84, 0.80)
         );
 
-    border-top: 1px solid var(--borda);
+    border-top:
+        1px solid var(--borda);
 
-    border-bottom: 1px solid var(--borda);
+    border-bottom:
+        1px solid var(--borda);
 
 }
 
 
 /* =========================================================
-   TÍTULOS
+   11. TÍTULOS DAS SEÇÕES
    ========================================================= */
 
 .titulo-secao {
@@ -497,7 +534,8 @@ main {
 
     max-width: 1200px;
 
-    margin: 0 auto 50px;
+    margin:
+        0 auto 50px;
 
     text-align: center;
 
@@ -510,9 +548,9 @@ main {
 
     color: var(--verde);
 
-    font-weight: bold;
-
     font-size: 0.9rem;
+
+    font-weight: bold;
 
     letter-spacing: 3px;
 
@@ -523,54 +561,18 @@ main {
 
 .titulo-secao h2 {
 
-    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: var(--branco);
+
+    font-size:
+        clamp(2rem, 4vw, 3.2rem);
 
     line-height: 1.2;
 
-    color: var(--branco);
-
 }
 
 
 /* =========================================================
-   PARÁGRAFOS
-   ========================================================= */
-
-p {
-
-    color: var(--texto);
-
-    text-align: justify;
-
-    text-justify: inter-word;
-
-}
-
-
-.sobre-texto {
-
-    width: 100%;
-
-    max-width: 1100px;
-
-    margin: auto;
-
-}
-
-
-.sobre-texto p {
-
-    margin-bottom: 20px;
-
-    font-size: 1.08rem;
-
-    text-align: justify;
-
-}
-
-
-/* =========================================================
-   DESTAQUE
+   12. DESTAQUE
    ========================================================= */
 
 .destaque {
@@ -600,7 +602,8 @@ p {
 
     gap: 30px;
 
-    border: 1px solid var(--borda);
+    border:
+        1px solid var(--borda);
 
     border-radius: 20px;
 
@@ -608,7 +611,8 @@ p {
         rgba(18, 59, 84, 0.55);
 
     box-shadow:
-        0 15px 40px var(--sombra);
+        0 15px 40px
+        var(--sombra);
 
 }
 
@@ -630,13 +634,39 @@ p {
 
     margin-bottom: 10px;
 
+    color: var(--branco);
+
     font-size: 1.6rem;
 
 }
 
 
 /* =========================================================
-   GALERIA
+   13. SOBRE A ESCOLA
+   ========================================================= */
+
+.sobre-texto {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+
+.sobre-texto p {
+
+    margin-bottom: 20px;
+
+    font-size: 1.08rem;
+
+}
+
+
+/* =========================================================
+   14. GALERIA
    ========================================================= */
 
 .galeria {
@@ -650,12 +680,17 @@ p {
 
     max-width: 1000px;
 
-    margin: 25px auto 0;
+    margin:
+        25px auto 0;
 
     font-size: 1.08rem;
 
 }
 
+
+/* =========================================================
+   15. GRID DA GALERIA
+   ========================================================= */
 
 .galeria-grid {
 
@@ -670,40 +705,41 @@ p {
     grid-template-columns:
         repeat(4, minmax(0, 1fr));
 
-    gap: 18px;
+    gap: 20px;
 
 }
 
+
+/* =========================================================
+   16. FOTOS
+   ========================================================= */
 
 .foto-item {
 
     width: 100%;
 
-    height: 240px;
+    height: 250px;
 
     overflow: hidden;
 
-    border-radius: 16px;
+    position: relative;
 
-    border: 1px solid var(--borda);
+    border-radius: 18px;
 
-    background: var(--azul);
+    border:
+        1px solid var(--borda);
+
+    background:
+        var(--azul);
 
     box-shadow:
-        0 10px 25px var(--sombra);
+        0 10px 30px
+        var(--sombra);
 
     transition:
-        transform 0.3s ease,
-        border-color 0.3s ease;
-
-}
-
-
-.foto-item:hover {
-
-    transform: translateY(-6px);
-
-    border-color: var(--ciano);
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
 
 }
 
@@ -719,23 +755,48 @@ p {
     object-fit: cover;
 
     transition:
-        transform 0.4s ease;
+        transform 0.5s ease,
+        filter 0.5s ease;
+
+}
+
+
+.foto-item:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        var(--ciano);
+
+    box-shadow:
+        0 18px 40px
+        rgba(0, 0, 0, 0.40);
 
 }
 
 
 .foto-item:hover img {
 
-    transform: scale(1.06);
+    transform:
+        scale(1.08);
+
+    filter:
+        brightness(1.08);
 
 }
 
+
+/* =========================================================
+   17. LEGENDA DA GALERIA
+   ========================================================= */
 
 .foto-legenda {
 
     max-width: 900px;
 
-    margin: 35px auto 0;
+    margin:
+        35px auto 0;
 
     text-align: center;
 
@@ -761,7 +822,7 @@ p {
 
 
 /* =========================================================
-   CARDS
+   18. CARDS DAS ÁREAS
    ========================================================= */
 
 .cards {
@@ -788,7 +849,8 @@ p {
 
     padding: 30px;
 
-    border: 1px solid var(--borda);
+    border:
+        1px solid var(--borda);
 
     border-radius: 18px;
 
@@ -796,7 +858,8 @@ p {
         rgba(7, 24, 39, 0.65);
 
     box-shadow:
-        0 12px 30px var(--sombra);
+        0 12px 30px
+        var(--sombra);
 
     transition:
         transform 0.3s ease,
@@ -807,12 +870,18 @@ p {
 
 .cards article:hover {
 
-    transform: translateY(-7px);
+    transform:
+        translateY(-7px);
 
-    border-color: var(--ciano);
+    border-color:
+        var(--ciano);
 
 }
 
+
+/* =========================================================
+   19. ÍCONES DOS CARDS
+   ========================================================= */
 
 .card-icone {
 
@@ -830,11 +899,14 @@ p {
 
     border-radius: 15px;
 
-    background: rgba(50, 215, 226, 0.10);
+    background:
+        rgba(50, 215, 226, 0.10);
 
-    border: 1px solid var(--borda);
+    border:
+        1px solid var(--borda);
 
-    color: var(--ciano);
+    color:
+        var(--ciano);
 
     font-size: 1.8rem;
 
@@ -845,7 +917,8 @@ p {
 
     margin-bottom: 15px;
 
-    color: var(--branco);
+    color:
+        var(--branco);
 
     font-size: 1.35rem;
 
@@ -865,7 +938,8 @@ p {
 
 .cards article a {
 
-    color: var(--ciano);
+    color:
+        var(--ciano);
 
     text-decoration: none;
 
@@ -876,13 +950,14 @@ p {
 
 .cards article a:hover {
 
-    color: var(--verde);
+    color:
+        var(--verde);
 
 }
 
 
 /* =========================================================
-   IMAGENS DAS OUTRAS PÁGINAS
+   20. IMAGENS DAS OUTRAS PÁGINAS
    ========================================================= */
 
 .sobre-texto img,
@@ -896,7 +971,8 @@ p {
 
     height: auto;
 
-    margin: 20px auto;
+    margin:
+        20px auto;
 
     border-radius: 15px;
 
@@ -913,22 +989,25 @@ p {
 
     display: block;
 
-    margin: 0 auto 25px;
+    margin:
+        0 auto 25px;
 
     object-fit: cover;
 
     border-radius: 50%;
 
-    border: 3px solid var(--ciano);
+    border:
+        3px solid var(--ciano);
 
     box-shadow:
-        0 10px 30px var(--sombra);
+        0 10px 30px
+        var(--sombra);
 
 }
 
 
 /* =========================================================
-   TECNOCIÊNCIA
+   21. TECNOCIÊNCIA
    ========================================================= */
 
 .tecnociencia {
@@ -952,7 +1031,7 @@ p {
 
 
 /* =========================================================
-   ROBÓTICA
+   22. ROBÓTICA
    ========================================================= */
 
 .robotica-grid {
@@ -986,7 +1065,8 @@ p {
 
     justify-content: center;
 
-    border: 1px solid var(--borda);
+    border:
+        1px solid var(--borda);
 
     border-radius: 25px;
 
@@ -1007,6 +1087,9 @@ p {
 
     margin-bottom: 20px;
 
+    color:
+        var(--branco);
+
     font-size: 2.4rem;
 
 }
@@ -1022,7 +1105,7 @@ p {
 
 
 /* =========================================================
-   HABILIDADES
+   23. HABILIDADES
    ========================================================= */
 
 .habilidades {
@@ -1040,16 +1123,19 @@ p {
 
 .habilidades span {
 
-    padding: 7px 13px;
+    padding:
+        7px 13px;
 
-    border: 1px solid var(--borda);
+    border:
+        1px solid var(--borda);
 
     border-radius: 20px;
 
     background:
         rgba(50, 215, 226, 0.08);
 
-    color: var(--ciano);
+    color:
+        var(--ciano);
 
     font-size: 0.85rem;
 
@@ -1057,14 +1143,15 @@ p {
 
 
 /* =========================================================
-   RODAPÉ
+   24. RODAPÉ
    ========================================================= */
 
 .rodape {
 
     width: 100%;
 
-    padding: 35px 7%;
+    padding:
+        35px 7%;
 
     display: flex;
 
@@ -1076,16 +1163,19 @@ p {
 
     gap: 15px;
 
-    background: #04111d;
+    background:
+        #04111d;
 
-    border-top: 1px solid var(--borda);
+    border-top:
+        1px solid var(--borda);
 
 }
 
 
 .rodape p {
 
-    color: var(--texto);
+    color:
+        var(--texto);
 
     font-size: 0.85rem;
 
@@ -1095,10 +1185,11 @@ p {
 
 
 /* =========================================================
-   RESPONSIVIDADE – TABLETS
+   25. TABLETS
    ========================================================= */
 
 @media (max-width: 1100px) {
+
 
     .cabecalho {
 
@@ -1116,14 +1207,6 @@ p {
     }
 
 
-    .cards {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-    }
-
-
     .galeria-grid {
 
         grid-template-columns:
@@ -1132,16 +1215,26 @@ p {
     }
 
 
+    .cards {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
     .tecnociencia {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
     }
 
 
     .robotica-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
     }
 
@@ -1149,16 +1242,20 @@ p {
 
 
 /* =========================================================
-   RESPONSIVIDADE – CELULARES
+   26. CELULARES
    ========================================================= */
 
 @media (max-width: 700px) {
+
+
+    /* CABEÇALHO */
 
     .cabecalho {
 
         min-height: auto;
 
-        padding: 12px 5%;
+        padding:
+            12px 5%;
 
     }
 
@@ -1193,12 +1290,16 @@ p {
     }
 
 
+    /* BOTÃO */
+
     .botao-menu {
 
         display: block;
 
     }
 
+
+    /* MENU */
 
     .menu {
 
@@ -1228,7 +1329,8 @@ p {
 
         width: 100%;
 
-        padding: 12px 5px;
+        padding:
+            12px 5px;
 
         border-bottom:
             1px solid
@@ -1244,11 +1346,14 @@ p {
     }
 
 
+    /* HERO */
+
     .hero {
 
         min-height: 65vh;
 
-        padding: 60px 6%;
+        padding:
+            60px 6%;
 
     }
 
@@ -1267,9 +1372,12 @@ p {
     }
 
 
+    /* SEÇÕES */
+
     .secao {
 
-        padding: 60px 6%;
+        padding:
+            60px 6%;
 
     }
 
@@ -1288,6 +1396,8 @@ p {
     }
 
 
+    /* DESTAQUE */
+
     .info-card {
 
         flex-direction: column;
@@ -1298,6 +1408,8 @@ p {
 
     }
 
+
+    /* GALERIA */
 
     .galeria-grid {
 
@@ -1311,14 +1423,17 @@ p {
 
     .foto-item {
 
-        height: 180px;
+        height: 190px;
 
     }
 
 
+    /* CARDS */
+
     .cards {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
     }
 
@@ -1330,9 +1445,12 @@ p {
     }
 
 
+    /* ROBÓTICA */
+
     .robotica-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 30px;
 
@@ -1360,6 +1478,8 @@ p {
     }
 
 
+    /* RODAPÉ */
+
     .rodape {
 
         flex-direction: column;
@@ -1381,10 +1501,11 @@ p {
 
 
 /* =========================================================
-   CELULARES PEQUENOS
+   27. CELULARES PEQUENOS
    ========================================================= */
 
 @media (max-width: 450px) {
+
 
     .logo-texto h1 {
 
@@ -1396,6 +1517,15 @@ p {
     .logo-texto p {
 
         display: none;
+
+    }
+
+
+    .linha-destaque {
+
+        width: 60px;
+
+        height: 3px;
 
     }
 
@@ -1424,14 +1554,15 @@ p {
 
     .galeria-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
     }
 
 
     .foto-item {
 
-        height: 240px;
+        height: 250px;
 
     }
 
