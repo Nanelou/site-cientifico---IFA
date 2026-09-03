@@ -2,301 +2,274 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>Ciêntificando com IFAS | Colégio Estadual Professor Gabriel Rosa</title>
 
-    <title>
-        Ciêntificando com IFAS| Colégio Estadual Professor Gabriel Rosa
-    </title>
-
-    <link rel="stylesheet"
-          href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-<div class="site-shell">
+    <div class="site-shell">
 
-
-    <!-- ==============================
-         CABEÇALHO
-    =============================== -->
-
-    <header class="cabecalho">
+        <!-- CABEÇALHO -->
         <header class="cabecalho">
 
-    <div class="logo">
+            <div class="logo">
 
-        <img src="img/slogan.png.jpg"
-             alt="Logo do Colégio Estadual Professor Gabriel Rosa">
+                <img src="img/slogan.png.jpg"
+                     alt="Logo do projeto Ciêntificando com IFAS">
 
-        <div class="logo-texto">
+                <div class="logo-texto">
 
-            <h1>
-                Ciêntificando com IFAS
-            </h1>
+                    <h1>Ciêntificando com IFAS</h1>
 
-            <p>
-                Colégio Estadual Professor Gabriel Rosa
-            </p>
+                    <p>
+                        Colégio Estadual Professor Gabriel Rosa
+                    </p>
 
-        </div>
-
-    </div>
-
-
-    <nav class="menu">
-
-        <a href="index.html">
-            Início
-        </a>
-
-        <a href="educacaodigital.html">
-            Educação Digital e Programação
-        </a>
-
-        <a href="tecnociencia.html">
-           Física e  Tecnociência
-        </a>
-
-        <a href="robotica.html">
-            Robótica
-        </a>
-
-    </nav>
-
-
-    <button
-        class="botao-menu"
-        id="botaoMenu"
-        type="button"
-        aria-label="Abrir menu">
-
-        ☰
-
-    </button>
-
-</header>
-
-    <!-- ==============================
-         CONTEÚDO
-    =============================== -->
-
-    <main>
-
-
-        <section
-            id="inicio"
-            class="hero">
-
-            <div class="hero-conteudo">
-
-                <span class="etiqueta">
-                    PROJETO CIENTÍFICO
-                </span>
-
-
-                <h2>
-
-                    Ciência, Tecnologia
-
-                    <span>
-                        e Inovação
-                    </span>
-
-                </h2>
-
-
-                <p>
-
-                    Este espaço apresenta projetos,
-                    conhecimentos e experiências
-                    relacionados à  Fisica e Tecnociência, Educação digital: Programação e
-                    robótica desenvolvidos no ambiente escolar.
-
-                </p>
-
-
-                <a
-                    href="educacaodigital.html"
-                    class="botao">
-
-                    Conheça o projeto
-
-                </a>
-
-            </div>
-
-
-            <div class="hero-card">
-
-                <div class="icone-ciencia">
-                    🔬
                 </div>
 
-                <h3>
-                    Conhecimento que transforma
-                </h3>
-
-                <p>
-
-                    A ciência e a tecnologia contribuem
-                    para a construção de novos conhecimentos
-                    e soluções para a sociedade.
-
-                </p>
-
             </div>
 
-        </section>
+            <!-- BOTÃO MENU MOBILE -->
+            <button class="botao-menu"
+                    id="botaoMenu"
+                    aria-label="Abrir menu"
+                    aria-expanded="false">
+
+                ☰
+
+            </button>
+
+            <!-- MENU -->
+            <nav class="menu">
+
+                <a href="index.html" class="ativo">
+                    Início
+                </a>
+
+                <a href="educacaodigital.html">
+                    Educação Digital e Programação
+                </a>
+
+                <a href="tecnociencia.html">
+                    Física e Tecnociência
+                </a>
+
+                <a href="robotica.html">
+                    Robótica
+                </a>
+
+            </nav>
+
+        </header>
 
 
-        <!-- ==============================
-             COLÉGIO
-        =============================== -->
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main>
 
-        <section class="secao">
+            <!-- HERO -->
+            <section class="hero">
 
-            <div class="titulo-secao">
+                <div class="hero-conteudo">
 
-                <span>
-                    01
-                </span>
+                    <span class="etiqueta">
+                        CIÊNCIA • TECNOLOGIA • INOVAÇÃO
+                    </span>
 
-                <h2>
-                    Colégio Estadual Professor Gabriel Rosa
-                </h2>
+                    <h2>
+                        Ciência, Tecnologia e Inovação
+                    </h2>
 
-            </div>
+                    <p>
+                        Este espaço apresenta projetos, conhecimentos
+                        e experiências relacionados à Física e Tecnociência,
+                        Educação Digital, Programação e Robótica,
+                        desenvolvidos no ambiente escolar.
+                    </p>
+
+                    <a href="#sobre" class="botao">
+                        Conheça o projeto
+                    </a>
+
+                </div>
+
+            </section>
 
 
-            <div class="sobre-grid">
+            <!-- DESTAQUE -->
+            <section class="secao destaque">
+
+                <div class="info-card">
+
+                    <div class="info-numero">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Conhecimento que transforma
+                        </h3>
+
+                        <p>
+                            A ciência e a tecnologia fazem parte da sociedade
+                            contemporânea e estão presentes no cotidiano.
+                            Na escola, o conhecimento científico, a programação,
+                            a tecnologia e a robótica podem contribuir para o
+                            desenvolvimento da criatividade, da autonomia,
+                            da resolução de problemas e do pensamento crítico.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SOBRE A ESCOLA -->
+            <section class="secao" id="sobre">
+
+                <div class="titulo-secao">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h2>
+                        Colégio Estadual Professor Gabriel Rosa
+                    </h2>
+
+                </div>
 
 
                 <div class="sobre-texto">
 
-                    <h3>
-                        Educação, conhecimento e inovação
-                    </h3>
-
-
                     <p>
-
-                        O Colégio Estadual Professor Gabriel Rosa,
-                        localizado na rua Professor Gabriel Rosa em Curiúva, Paraná, é um espaço
-                        de aprendizagem, convivência e formação.
-
+                        O Colégio Estadual Professor Gabriel Rosa está
+                        localizado no município de Curiúva, no estado do Paraná.
+                        A escola constitui um espaço de aprendizagem,
+                        desenvolvimento de projetos e construção do conhecimento.
                     </p>
 
-
                     <p>
-
-                        O projeto Ciência & Tecnologia busca
-                        aproximar os estudantes da pesquisa,
-                        da ciência, da tecnologia e da inovação.
-
+                        Por meio das atividades relacionadas à ciência,
+                        tecnologia e inovação, os estudantes têm a oportunidade
+                        de relacionar os conhecimentos escolares com situações
+                        presentes em seu cotidiano.
                     </p>
 
-
                     <p>
-
-                        Por meio de atividades práticas e projetos,
-                        os estudantes podem desenvolver criatividade,
-                        pensamento crítico, raciocínio lógico e
-                        capacidade de solucionar problemas.
-
+                        O projeto <strong>Ciêntificando com IFAS</strong>
+                        apresenta experiências desenvolvidas no ambiente
+                        escolar envolvendo Física, Tecnociência, Educação
+                        Digital, Programação e Robótica.
                     </p>
 
                 </div>
 
-
-                <div class="informacoes">
-
-
-                    <div class="info-card">
-
-                        <span>
-                            📍
-                        </span>
-
-                        <div>
-
-                            <h4>
-                                Localização
-                            </h4>
-
-                            <p>
-                                Curiúva – Paraná
-                            </p>
-
-                        </div>
-
-                    </div>
+            </section>
 
 
-                    <div class="info-card">
+            <!-- ÁREAS DO SITE -->
+            <section class="secao secao-azul">
 
-                        <span>
-                            🎓
-                        </span>
+                <div class="titulo-secao">
 
-                        <div>
+                    <span>
+                        03
+                    </span>
 
-                            <h4>
-                                Educação
-                            </h4>
-
-                            <p>
-                                Aprendizagem e formação
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="info-card">
-
-                        <span>
-                            💡
-                        </span>
-
-                        <div>
-
-                            <h4>
-                                Inovação
-                            </h4>
-
-                            <p>
-                                Ciência e tecnologia
-                            </p>
-
-                        </div>
-
-                    </div>
+                    <h2>
+                        Conheça nossas áreas
+                    </h2>
 
                 </div>
 
-            </div>
 
-        </section>
+                <div class="cards">
+
+                    <article>
+
+                        <div class="card-icone">
+                            💻
+                        </div>
+
+                        <h3>
+                            Educação Digital
+                        </h3>
+
+                        <p>
+                            Uso consciente e criativo das tecnologias,
+                            pesquisa digital, programação, inteligência
+                            artificial e cidadania digital.
+                        </p>
+
+                        <a href="educacaodigital.html">
+                            Saiba mais →
+                        </a>
+
+                    </article>
 
 
-    </main>
+                    <article>
+
+                        <div class="card-icone">
+                            ⚛️
+                        </div>
+
+                        <h3>
+                            Física e Tecnociência
+                        </h3>
+
+                        <p>
+                            Relações entre ciência, tecnologia e sociedade,
+                            buscando compreender como o conhecimento científico
+                            participa da transformação do mundo.
+                        </p>
+
+                        <a href="tecnociencia.html">
+                            Saiba mais →
+                        </a>
+
+                    </article>
 
 
-    <!-- ==============================
-         RODAPÉ
-    =============================== -->
+                    <article>
 
-    <footer>
+                        <div class="card-icone">
+                            🤖
+                        </div>
 
-        <div class="copyright">
+                        <h3>
+                            Robótica
+                        </h3>
+
+                        <p>
+                            Construção de projetos, automação, sensores,
+                            programação e desenvolvimento de soluções
+                            para problemas do cotidiano.
+                        </p>
+
+                        <a href="robotica.html">
+                            Saiba mais →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- RODAPÉ -->
+        <footer class="rodape">
 
             <p>
                 © 2026 – Colégio Estadual Professor Gabriel Rosa
@@ -306,15 +279,12 @@
                 Projeto Ciência & Tecnologia
             </p>
 
-        </div>
+        </footer>
 
-    </footer>
-
-
-</div>
+    </div>
 
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 

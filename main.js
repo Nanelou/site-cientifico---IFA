@@ -1,82 +1,66 @@
-// =====================================================
-// MENU MOBILE
-// =====================================================
+/* =========================================================
+   CIÊNTIFICANDO COM IFAS
+   JAVASCRIPT
+   ========================================================= */
 
-const botaoMenu =
-    document.getElementById("botaoMenu");
 
-const menu =
-    document.querySelector(".menu");
+/* =========================================================
+   MENU MOBILE
+   ========================================================= */
+
+const botaoMenu = document.getElementById("botaoMenu");
+
+const menu = document.querySelector(".menu");
 
 
 if (botaoMenu && menu) {
 
-    botaoMenu.addEventListener(
-        "click",
-        function () {
+    botaoMenu.addEventListener("click", function () {
 
-            menu.classList.toggle("ativo");
+        menu.classList.toggle("ativo");
 
-            const aberto =
-                menu.classList.contains("ativo");
+        const aberto =
+            menu.classList.contains("ativo");
+
+        botaoMenu.setAttribute(
+            "aria-expanded",
+            aberto
+        );
+
+    });
+
+
+    /* Fecha o menu quando um link é clicado */
+
+    const linksMenu =
+        menu.querySelectorAll("a");
+
+
+    linksMenu.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            menu.classList.remove("ativo");
 
             botaoMenu.setAttribute(
                 "aria-expanded",
-                aberto
+                "false"
             );
 
-        }
-    );
+        });
+
+    });
 
 }
 
 
-// =====================================================
-// FECHAR MENU
-// =====================================================
-
-const linksMenu =
-    document.querySelectorAll(".menu a");
-
-
-linksMenu.forEach(
-    function (link) {
-
-        link.addEventListener(
-            "click",
-            function () {
-
-                if (menu) {
-
-                    menu.classList.remove(
-                        "ativo"
-                    );
-
-                }
-
-                if (botaoMenu) {
-
-                    botaoMenu.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                }
-
-            }
-        );
-
-    }
-);
-
-
-// =====================================================
-// ANIMAÇÃO DOS CARDS
-// =====================================================
+/* =========================================================
+   ANIMAÇÃO DOS CARDS
+   ========================================================= */
 
 const elementos =
     document.querySelectorAll(
-        ".info-card, .cards article, .linha-tempo div"
+        ".info-card, .cards article"
     );
 
 
@@ -87,54 +71,45 @@ if ("IntersectionObserver" in window) {
 
             function (entradas) {
 
-                entradas.forEach(
-                    function (entrada) {
+                entradas.forEach(function (entrada) {
 
-                        if (
-                            entrada.isIntersecting
-                        ) {
+                    if (entrada.isIntersecting) {
 
-                            entrada.target.style.opacity =
-                                "1";
+                        entrada.target.classList.add(
+                            "animar"
+                        );
 
-                            entrada.target.style.transform =
-                                "translateY(0)";
+                        entrada.target.style.opacity = "1";
 
-                            observador.unobserve(
-                                entrada.target
-                            );
+                        entrada.target.style.transform =
+                            "translateY(0)";
 
-                        }
+                        observador.unobserve(
+                            entrada.target
+                        );
 
                     }
-                );
+
+                });
 
             },
 
             {
-                threshold: 0.2
+                threshold: 0.15
             }
 
         );
 
 
-    elementos.forEach(
-        function (elemento) {
+    elementos.forEach(function (elemento) {
 
-            elemento.style.opacity =
-                "0";
+        elemento.style.opacity = "0";
 
-            elemento.style.transform =
-                "translateY(30px)";
+        elemento.style.transform =
+            "translateY(30px)";
 
-            elemento.style.transition =
-                "opacity 0.6s ease, transform 0.6s ease";
+        observador.observe(elemento);
 
-            observador.observe(
-                elemento
-            );
-
-        }
-    );
+    });
 
 }
