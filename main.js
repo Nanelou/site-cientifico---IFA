@@ -1,6 +1,7 @@
 /* =========================================================
    CIÊNTIFICANDO COM IFAS
    JAVASCRIPT
+   COLÉGIO ESTADUAL PROFESSOR GABRIEL ROSA
    ========================================================= */
 
 
@@ -9,31 +10,37 @@
    ========================================================= */
 
 const botaoMenu = document.getElementById("botaoMenu");
-
 const menu = document.querySelector(".menu");
 
 
 if (botaoMenu && menu) {
 
+    /* Abrir e fechar o menu */
+
     botaoMenu.addEventListener("click", function () {
 
         menu.classList.toggle("ativo");
 
-        const aberto =
-            menu.classList.contains("ativo");
+        const aberto = menu.classList.contains("ativo");
 
         botaoMenu.setAttribute(
             "aria-expanded",
             aberto
         );
 
+        botaoMenu.setAttribute(
+            "aria-label",
+            aberto
+                ? "Fechar menu"
+                : "Abrir menu"
+        );
+
     });
 
 
-    /* Fecha o menu quando um link é clicado */
+    /* Fechar o menu ao clicar em um link */
 
-    const linksMenu =
-        menu.querySelectorAll("a");
+    const linksMenu = menu.querySelectorAll("a");
 
 
     linksMenu.forEach(function (link) {
@@ -47,6 +54,11 @@ if (botaoMenu && menu) {
                 "false"
             );
 
+            botaoMenu.setAttribute(
+                "aria-label",
+                "Abrir menu"
+            );
+
         });
 
     });
@@ -55,50 +67,46 @@ if (botaoMenu && menu) {
 
 
 /* =========================================================
-   ANIMAÇÃO DOS CARDS
+   ANIMAÇÃO DOS ELEMENTOS
    ========================================================= */
 
-const elementos =
-    document.querySelectorAll(
-        ".info-card, .cards article"
-    );
+const elementos = document.querySelectorAll(
+    ".info-card, .cards article, .foto-item"
+);
 
 
 if ("IntersectionObserver" in window) {
 
-    const observador =
-        new IntersectionObserver(
+    const observador = new IntersectionObserver(
 
-            function (entradas) {
+        function (entradas) {
 
-                entradas.forEach(function (entrada) {
+            entradas.forEach(function (entrada) {
 
-                    if (entrada.isIntersecting) {
+                if (entrada.isIntersecting) {
 
-                        entrada.target.classList.add(
-                            "animar"
-                        );
+                    entrada.target.classList.add("animar");
 
-                        entrada.target.style.opacity = "1";
+                    entrada.target.style.opacity = "1";
 
-                        entrada.target.style.transform =
-                            "translateY(0)";
+                    entrada.target.style.transform =
+                        "translateY(0)";
 
-                        observador.unobserve(
-                            entrada.target
-                        );
+                    observador.unobserve(
+                        entrada.target
+                    );
 
-                    }
+                }
 
-                });
+            });
 
-            },
+        },
 
-            {
-                threshold: 0.15
-            }
+        {
+            threshold: 0.15
+        }
 
-        );
+    );
 
 
     elementos.forEach(function (elemento) {
@@ -113,3 +121,34 @@ if ("IntersectionObserver" in window) {
     });
 
 }
+
+
+/* =========================================================
+   FECHAR MENU AO REDIMENSIONAR A TELA
+   ========================================================= */
+
+window.addEventListener("resize", function () {
+
+    if (window.innerWidth > 700) {
+
+        if (menu) {
+            menu.classList.remove("ativo");
+        }
+
+        if (botaoMenu) {
+
+            botaoMenu.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            botaoMenu.setAttribute(
+                "aria-label",
+                "Abrir menu"
+            );
+
+        }
+
+    }
+
+});
