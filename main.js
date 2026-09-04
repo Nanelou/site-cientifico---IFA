@@ -1,9 +1,7 @@
-
-```javascript
 /* =========================================================
    CIÊNTIFICANDO COM IFAS
-   JAVASCRIPT
-   COLÉGIO ESTADUAL PROFESSOR GABRIEL ROSA
+   JAVASCRIPT 2.0
+   MENU + GALERIA + LIGHTBOX + ACESSIBILIDADE
    ========================================================= */
 
 
@@ -11,27 +9,29 @@
    1. MENU MOBILE
    ========================================================= */
 
-const botaoMenu = document.getElementById("botaoMenu");
-const menu = document.querySelector(".menu");
+document.addEventListener("DOMContentLoaded", function () {
+
+    const botaoMenu =
+        document.getElementById("botaoMenu");
+
+    const menu =
+        document.getElementById("menuPrincipal");
 
 
-if (botaoMenu && menu) {
+    if (!botaoMenu || !menu) {
+        return;
+    }
 
-    /* -----------------------------------------------------
-       Abrir e fechar o menu
-       ----------------------------------------------------- */
 
     botaoMenu.addEventListener("click", function () {
 
-        menu.classList.toggle("ativo");
-
         const aberto =
-            menu.classList.contains("ativo");
+            menu.classList.toggle("ativo");
 
 
         botaoMenu.setAttribute(
             "aria-expanded",
-            aberto
+            aberto ? "true" : "false"
         );
 
 
@@ -45,15 +45,13 @@ if (botaoMenu && menu) {
     });
 
 
-    /* -----------------------------------------------------
-       Fechar o menu ao clicar em um link
-       ----------------------------------------------------- */
+    /* Fecha o menu ao clicar em um link */
 
-    const linksMenu =
+    const links =
         menu.querySelectorAll("a");
 
 
-    linksMenu.forEach(function (link) {
+    links.forEach(function (link) {
 
         link.addEventListener("click", function () {
 
@@ -75,111 +73,23 @@ if (botaoMenu && menu) {
 
     });
 
-}
 
+    /* Fecha o menu ao aumentar a tela */
 
-/* =========================================================
-   2. ANIMAÇÃO DOS ELEMENTOS
-   ========================================================= */
+    window.addEventListener(
+        "resize",
+        function () {
 
-/*
-   A animação é aplicada aos cards e às fotos
-   quando eles aparecem na tela.
-*/
-
-const elementos =
-    document.querySelectorAll(
-        ".info-card, .cards article, .foto-item, .foto-galeria"
-    );
-
-
-if ("IntersectionObserver" in window) {
-
-    const observador =
-        new IntersectionObserver(
-
-            function (entradas) {
-
-                entradas.forEach(function (entrada) {
-
-                    if (entrada.isIntersecting) {
-
-                        entrada.target.classList.add(
-                            "animar"
-                        );
-
-
-                        entrada.target.style.opacity =
-                            "1";
-
-
-                        entrada.target.style.transform =
-                            "translateY(0)";
-
-
-                        observador.unobserve(
-                            entrada.target
-                        );
-
-                    }
-
-                });
-
-            },
-
-            {
-                threshold: 0.15
-            }
-
-        );
-
-
-    elementos.forEach(function (elemento) {
-
-        elemento.style.opacity = "0";
-
-
-        elemento.style.transform =
-            "translateY(30px)";
-
-
-        elemento.style.transition =
-            "opacity 0.6s ease, transform 0.6s ease";
-
-
-        observador.observe(elemento);
-
-    });
-
-}
-
-
-/* =========================================================
-   3. FECHAR MENU AO REDIMENSIONAR A TELA
-   ========================================================= */
-
-window.addEventListener(
-    "resize",
-    function () {
-
-        if (window.innerWidth > 700) {
-
-            if (menu) {
+            if (window.innerWidth > 700) {
 
                 menu.classList.remove(
                     "ativo"
                 );
 
-            }
-
-
-            if (botaoMenu) {
-
                 botaoMenu.setAttribute(
                     "aria-expanded",
                     "false"
                 );
-
 
                 botaoMenu.setAttribute(
                     "aria-label",
@@ -189,261 +99,350 @@ window.addEventListener(
             }
 
         }
+    );
 
-    }
-);
+});
+
 
 
 /* =========================================================
-   4. GALERIA DE FOTOS
-      LIGHTBOX
+   2. ANIMAÇÃO DOS ELEMENTOS
    ========================================================= */
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-        /* -------------------------------------------------
-           Seleciona as imagens da galeria
-           ------------------------------------------------- */
+    const elementos =
+        document.querySelectorAll(
+            ".info-card, .cards article, .foto-item, .foto-galeria"
+        );
 
-        const fotos =
-            document.querySelectorAll(
-                ".foto-galeria img"
+
+    if (
+        elementos.length === 0 ||
+        !("IntersectionObserver" in window)
+    ) {
+        return;
+    }
+
+
+    const observador =
+        new IntersectionObserver(
+            function (entradas) {
+
+                entradas.forEach(
+                    function (entrada) {
+
+                        if (
+                            entrada.isIntersecting
+                        ) {
+
+                            entrada.target.classList.add(
+                                "animar"
+                            );
+
+
+                            entrada.target.style.opacity =
+                                "1";
+
+
+                            entrada.target.style.transform =
+                                "translateY(0)";
+
+
+                            observador.unobserve(
+                                entrada.target
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+    elementos.forEach(
+        function (elemento) {
+
+            elemento.style.opacity =
+                "0";
+
+            elemento.style.transform =
+                "translateY(25px)";
+
+            elemento.style.transition =
+                "opacity 0.6s ease, transform 0.6s ease";
+
+            observador.observe(
+                elemento
+            );
+
+        }
+    );
+
+});
+
+
+
+/* =========================================================
+   3. GALERIA / LIGHTBOX
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    const fotos =
+        document.querySelectorAll(
+            ".foto-item img, .foto-galeria img"
+        );
+
+
+    if (fotos.length === 0) {
+        return;
+    }
+
+
+    /* Cria o Lightbox */
+
+    const lightbox =
+        document.createElement("div");
+
+
+    lightbox.className =
+        "lightbox";
+
+
+    lightbox.setAttribute(
+        "role",
+        "dialog"
+    );
+
+
+    lightbox.setAttribute(
+        "aria-modal",
+        "true"
+    );
+
+
+    lightbox.setAttribute(
+        "aria-label",
+        "Imagem ampliada"
+    );
+
+
+    /* Botão fechar */
+
+    const fechar =
+        document.createElement("button");
+
+
+    fechar.className =
+        "fechar-lightbox";
+
+
+    fechar.type =
+        "button";
+
+
+    fechar.innerHTML =
+        "&times;";
+
+
+    fechar.setAttribute(
+        "aria-label",
+        "Fechar imagem"
+    );
+
+
+    /* Imagem */
+
+    const imagem =
+        document.createElement("img");
+
+
+    imagem.alt =
+        "";
+
+
+    imagem.setAttribute(
+        "draggable",
+        "false"
+    );
+
+
+    lightbox.appendChild(
+        fechar
+    );
+
+
+    lightbox.appendChild(
+        imagem
+    );
+
+
+    document.body.appendChild(
+        lightbox
+    );
+
+
+    let fotoAnterior =
+        null;
+
+
+    /* Abrir */
+
+    fotos.forEach(
+        function (foto) {
+
+            foto.setAttribute(
+                "tabindex",
+                "0"
             );
 
 
-        /*
-           Se a página não possuir galeria,
-           o código não executará o Lightbox.
-        */
-
-        if (fotos.length === 0) {
-
-            return;
-
-        }
+            foto.setAttribute(
+                "role",
+                "button"
+            );
 
 
-        /* =================================================
-           5. CRIAÇÃO DO LIGHTBOX
-           ================================================= */
-
-        const lightbox =
-            document.createElement("div");
+            foto.setAttribute(
+                "aria-label",
+                "Ampliar imagem"
+            );
 
 
-        lightbox.classList.add(
-            "lightbox"
-        );
+            function abrirFoto() {
+
+                fotoAnterior =
+                    document.activeElement;
 
 
-        lightbox.setAttribute(
-            "role",
-            "dialog"
-        );
+                imagem.src =
+                    foto.src;
 
 
-        lightbox.setAttribute(
-            "aria-modal",
-            "true"
-        );
+                imagem.alt =
+                    foto.alt;
 
 
-        lightbox.setAttribute(
-            "aria-label",
-            "Visualização ampliada da imagem"
-        );
+                lightbox.classList.add(
+                    "ativo"
+                );
 
 
-        /* =================================================
-           6. BOTÃO FECHAR
-           ================================================= */
-
-        const fechar =
-            document.createElement("button");
+                document.body.style.overflow =
+                    "hidden";
 
 
-        fechar.classList.add(
-            "fechar-lightbox"
-        );
+                fechar.focus();
 
+            }
 
-        fechar.innerHTML = "&times;";
-
-
-        fechar.setAttribute(
-            "aria-label",
-            "Fechar imagem"
-        );
-
-
-        fechar.setAttribute(
-            "type",
-            "button"
-        );
-
-
-        /* =================================================
-           7. IMAGEM AMPLIADA
-           ================================================= */
-
-        const imagemGrande =
-            document.createElement("img");
-
-
-        imagemGrande.alt = "";
-
-
-        imagemGrande.setAttribute(
-            "draggable",
-            "false"
-        );
-
-
-        /* =================================================
-           8. ADICIONA OS ELEMENTOS AO LIGHTBOX
-           ================================================= */
-
-        lightbox.appendChild(
-            fechar
-        );
-
-
-        lightbox.appendChild(
-            imagemGrande
-        );
-
-
-        document.body.appendChild(
-            lightbox
-        );
-
-
-        /* =================================================
-           9. ABRIR A FOTO
-           ================================================= */
-
-        fotos.forEach(function (foto) {
 
             foto.addEventListener(
                 "click",
-                function () {
-
-                    imagemGrande.src =
-                        foto.src;
+                abrirFoto
+            );
 
 
-                    imagemGrande.alt =
-                        foto.alt;
+            /* Permite abrir com Enter ou espaço */
 
+            foto.addEventListener(
+                "keydown",
+                function (evento) {
 
-                    lightbox.classList.add(
-                        "ativo"
-                    );
+                    if (
+                        evento.key === "Enter" ||
+                        evento.key === " "
+                    ) {
 
+                        evento.preventDefault();
 
-                    /*
-                       Impede que a página fique
-                       rolando enquanto o Lightbox
-                       estiver aberto.
-                    */
+                        abrirFoto();
 
-                    document.body.style.overflow =
-                        "hidden";
-
-
-                    /*
-                       Coloca o foco no botão
-                       de fechar.
-                    */
-
-                    fechar.focus();
+                    }
 
                 }
             );
 
-        });
+        }
+    );
 
 
-        /* =================================================
-           10. FECHAR PELO BOTÃO X
-           ================================================= */
+    /* Fechar */
 
-        fechar.addEventListener(
-            "click",
-            function () {
+    function fecharLightbox() {
+
+        lightbox.classList.remove(
+            "ativo"
+        );
+
+
+        document.body.style.overflow =
+            "";
+
+
+        imagem.src =
+            "";
+
+
+        if (
+            fotoAnterior &&
+            typeof fotoAnterior.focus === "function"
+        ) {
+
+            fotoAnterior.focus();
+
+        }
+
+    }
+
+
+    fechar.addEventListener(
+        "click",
+        fecharLightbox
+    );
+
+
+    /* Clicar fora */
+
+    lightbox.addEventListener(
+        "click",
+        function (evento) {
+
+            if (
+                evento.target === lightbox
+            ) {
 
                 fecharLightbox();
 
             }
-        );
-
-
-        /* =================================================
-           11. FECHAR CLICANDO FORA DA FOTO
-           ================================================= */
-
-        lightbox.addEventListener(
-            "click",
-            function (evento) {
-
-                if (
-                    evento.target === lightbox
-                ) {
-
-                    fecharLightbox();
-
-                }
-
-            }
-        );
-
-
-        /* =================================================
-           12. FECHAR COM A TECLA ESC
-           ================================================= */
-
-        document.addEventListener(
-            "keydown",
-            function (evento) {
-
-                if (
-                    evento.key === "Escape" &&
-                    lightbox.classList.contains("ativo")
-                ) {
-
-                    fecharLightbox();
-
-                }
-
-            }
-        );
-
-
-        /* =================================================
-           13. FUNÇÃO PARA FECHAR O LIGHTBOX
-           ================================================= */
-
-        function fecharLightbox() {
-
-            lightbox.classList.remove(
-                "ativo"
-            );
-
-
-            document.body.style.overflow =
-                "";
-
-
-            /*
-               Limpa a imagem depois de fechar.
-            */
-
-            imagemGrande.src = "";
 
         }
+    );
 
-    }
-);
-```
+
+    /* Tecla ESC */
+
+    document.addEventListener(
+        "keydown",
+        function (evento) {
+
+            if (
+                evento.key === "Escape" &&
+                lightbox.classList.contains("ativo")
+            ) {
+
+                fecharLightbox();
+
+            }
+
+        }
+    );
+
+});

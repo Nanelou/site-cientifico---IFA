@@ -8,731 +8,751 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
+    <meta name="description"
+          content="Física e Tecnociência - Ciência, Tecnologia, Acessibilidade e Inclusão.">
+
     <title>
         Física e Tecnociência | Ciêntificando com IFAS
     </title>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- =====================================================
+         FONTE ACESSÍVEL
+         ===================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         CSS PRINCIPAL
+         ===================================================== -->
+
+    <link rel="stylesheet"
+          href="style.css">
 
 </head>
 
 
 <body>
 
-<div class="site-shell">
+    <div class="site-shell">
 
 
-    <!-- =====================================================
-         CABEÇALHO
-         ===================================================== -->
+        <!-- =====================================================
+             CABEÇALHO
+             ===================================================== -->
 
-    <header class="cabecalho">
+        <header class="cabecalho">
 
+            <!-- LOGO -->
 
-        <!-- LOGO E NOME DO PROJETO -->
+            <a href="index.html"
+               class="logo"
+               aria-label="Página inicial">
 
-        <div class="logo">
+                <img src="img/slogan.png.jpg"
+                     alt="Logo do projeto Ciêntificando com IFAS">
 
-            <img src="img/slogan.png.jpg"
-                 alt="Logo do projeto Ciêntificando com IFAS">
+                <div class="logo-texto">
 
-            <div class="logo-texto">
+                    <h1>
+                        Ciêntificando com IFAS
+                    </h1>
 
-                <h1>
-                    Ciêntificando com IFAS
-                </h1>
-
-                <span class="linha-destaque"></span>
-
-                <p>
-                    Colégio Estadual Professor Gabriel Rosa
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- BOTÃO MENU MOBILE -->
-
-        <button class="botao-menu"
-                id="botaoMenu"
-                aria-label="Abrir menu"
-                aria-expanded="false">
-
-            ☰
-
-        </button>
-
-
-        <!-- MENU PRINCIPAL -->
-
-        <nav class="menu">
-
-            <a href="index.html">
-                Início
-            </a>
-
-            <a href="educacaodigital.html">
-                Programação
-            </a>
-
-            <a href="tecnociencia.html" class="ativo">
-                Física e Tecnociência
-            </a>
-
-            <a href="robótica.html">
-                Robótica
-            </a>
-
-        </nav>
-
-
-    </header>
-
-
-
-    <!-- =====================================================
-         CONTEÚDO PRINCIPAL
-         ===================================================== -->
-
-    <main>
-
-
-        <!-- =================================================
-             APRESENTAÇÃO
-             ================================================= -->
-
-        <section class="hero hero-pagina">
-
-            <div class="hero-conteudo">
-
-                <h2>
-                    Física e
-                    <br>
-                    Tecnociência
-                </h2>
-
-                <p>
-
-                    Ciência, tecnologia e sociedade:
-                    conhecimentos que ajudam a compreender
-                    e transformar o mundo.
-
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             01 - O QUE É TECNOCIÊNCIA
-             ================================================= -->
-
-        <section class="secao">
-
-            <div class="titulo-secao">
-
-                <span>
-                    01
-                </span>
-
-                <h2>
-                    O que é Tecnociência?
-                </h2>
-
-            </div>
-
-
-            <div class="sobre-texto">
-
-                <p>
-
-                    A <strong>Tecnociência</strong> refere-se à
-                    estreita relação entre ciência e tecnologia
-                    na sociedade contemporânea. O desenvolvimento
-                    científico contribui para a criação de novas
-                    tecnologias, enquanto as tecnologias também
-                    possibilitam novas formas de produzir
-                    conhecimentos científicos.
-
-                </p>
-
-
-                <p>
-
-                    Essa relação pode ser observada em diferentes
-                    áreas da sociedade, como comunicação, saúde,
-                    transporte, produção industrial, energia,
-                    educação e diversas outras atividades presentes
-                    no cotidiano.
-
-                </p>
-
-
-                <p>
-
-                    Estudar Tecnociência significa também refletir
-                    sobre as transformações provocadas pela ciência
-                    e pela tecnologia, considerando suas possibilidades,
-                    seus benefícios, seus desafios e suas consequências
-                    para a sociedade e para o meio ambiente.
-
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             02 - CIÊNCIA, TECNOLOGIA E SOCIEDADE
-             ================================================= -->
-
-        <section class="secao secao-azul">
-
-            <div class="titulo-secao">
-
-                <span>
-                    02
-                </span>
-
-                <h2>
-                    Ciência, Tecnologia e Sociedade
-                </h2>
-
-            </div>
-
-
-            <div class="cards">
-
-
-                <!-- CIÊNCIA -->
-
-                <article>
-
-                    <div class="card-icone">
-                        🔬
-                    </div>
-
-                    <h3>
-                        Ciência
-                    </h3>
+                    <span class="linha-destaque"></span>
 
                     <p>
-
-                        A ciência envolve a produção de conhecimentos
-                        por meio da investigação, da observação,
-                        da análise e da busca por explicações sobre
-                        diferentes fenômenos.
-
+                        Colégio Estadual Professor Gabriel Rosa
                     </p>
 
-                </article>
+                </div>
+
+            </a>
+
+
+            <!-- =================================================
+                 BOTÃO DO MENU
+                 ================================================= -->
+
+            <button class="botao-menu"
+                    id="botaoMenu"
+                    type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="menuPrincipal">
+
+                ☰
+
+            </button>
+
+
+            <!-- =================================================
+                 MENU PRINCIPAL
+                 ================================================= -->
+
+            <nav class="menu"
+                 id="menuPrincipal"
+                 aria-label="Menu principal">
+
+                <a href="index.html">
+                    Início
+                </a>
+
+                <a href="educacaodigital.html">
+                    Programação
+                </a>
+
+                <a href="tecnociencia.html"
+                   class="ativo"
+                   aria-current="page">
+
+                    Física e Tecnociência
+
+                </a>
+
+                <a href="robotica.html">
+                    Robótica
+                </a>
+
+            </nav>
+
+        </header>
 
 
 
-                <!-- TECNOLOGIA -->
+        <!-- =====================================================
+             CONTEÚDO PRINCIPAL
+             ===================================================== -->
 
-                <article>
+        <main>
 
-                    <div class="card-icone">
-                        ⚙️
-                    </div>
 
-                    <h3>
-                        Tecnologia
-                    </h3>
+            <!-- =================================================
+                 01 - HERO
+                 ================================================= -->
+
+            <section class="hero hero-fisica">
+
+                <div class="hero-conteudo">
+
+                    <span class="etiqueta">
+                        FÍSICA • TECNOCIÊNCIA
+                    </span>
+
+                    <h2>
+                        Física e<br>
+                        Tecnociência
+                    </h2>
 
                     <p>
-
-                        A tecnologia envolve conhecimentos, técnicas,
-                        ferramentas e processos utilizados para criar
-                        produtos, desenvolver soluções e atender a
-                        diferentes necessidades da sociedade.
-
+                        Ciência, tecnologia e sociedade:
+                        conhecimentos que ajudam a compreender
+                        e transformar o mundo.
                     </p>
 
-                </article>
+                </div>
 
-
-
-                <!-- SOCIEDADE -->
-
-                <article>
-
-                    <div class="card-icone">
-                        🌎
-                    </div>
-
-                    <h3>
-                        Sociedade
-                    </h3>
-
-                    <p>
-
-                        A sociedade participa da produção e utilização
-                        das tecnologias e também é transformada pelos
-                        seus efeitos, possibilidades e desafios.
-
-                    </p>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             03 - IFA FÍSICA E TECNOCIÊNCIA
-             ================================================= -->
-
-        <section class="secao">
-
-            <div class="titulo-secao">
-
-                <span>
-                    03
-                </span>
-
-                <h2>
-                    IFA - Física e Tecnociência
-                </h2>
-
-            </div>
-
-
-            <div class="sobre-texto">
-
-                <p>
-
-                    Entre as experiências desenvolvidas no projeto
-                    <strong>Ciêntificando com IFAS</strong> está o
-                    <strong>IFA - Física e Tecnociência</strong>,
-                    realizado com a orientação da
-                    <strong>professora Cristina</strong>, na área
-                    de Tecnociência, tendo como tema
-                    <strong>Acessibilidade para a Visão</strong>.
-
-                </p>
-
-
-                <p>
-
-                    O produto final do trimestre teve como objetivo a
-                    <strong>divulgação, no site, de publicações relacionadas
-                    à acessibilidade para pessoas cegas ou com baixa visão</strong>,
-                    articulando conhecimentos de tecnologia, programação,
-                    óptica e inclusão.
-
-                </p>
-
-
-                <p>
-
-                    Ao longo do trimestre, os estudantes da
-                    <strong>2ª Série C e da 2ª Série D</strong>
-                    desenvolveram atividades voltadas à identificação
-                    de necessidades do cotidiano e à elaboração de
-                    soluções tecnológicas acessíveis.
-
-                </p>
-
-
-                <p>
-
-                    Como parte das atividades, os estudantes foram
-                    convidados a elaborar um <strong>infográfico</strong>
-                    sobre de que forma a popularização dos smartphones,
-                    especialmente aqueles equipados com câmeras de
-                    maior resolução, pode contribuir para a acessibilidade
-                    de pessoas cegas ou com baixa visão.
-
-                </p>
-
-
-                <p>
-
-                    A proposta possibilitou refletir sobre o uso da
-                    tecnologia como ferramenta de inclusão e autonomia.
-
-                </p>
-
-
-                <p>
-
-                    Também foi desenvolvido um
-                    <strong>mapa conceitual sobre as aplicações da óptica</strong>
-                    nos diferentes contextos da sociedade, contemplando
-                    os ambientes residencial, comercial, escolar e industrial.
-
-                </p>
-
-
-                <p>
-
-                    Como produto prático, os estudantes desenvolveram
-                    a proposta <strong>QR Code – Cardápio Acessível</strong>.
-                    A atividade consistiu na criação de um cardápio digital
-                    acessível, utilizando o QR Code como recurso tecnológico
-                    para facilitar o acesso às informações por meio do celular.
-
-                </p>
-
-
-                <p>
-
-                    Organizados em equipes, os estudantes planejaram e
-                    desenvolveram uma solução considerando princípios de
-                    acessibilidade, praticidade e inclusão, aplicando
-                    conhecimentos de programação e tecnologia.
-
-                </p>
-
-
-                <p>
-
-                    Durante o desenvolvimento das atividades, foram
-                    estimuladas competências como
-                    <strong>criatividade, pensamento computacional,
-                    autonomia, resolução de problemas, pesquisa e
-                    trabalho colaborativo</strong>.
-
-                </p>
-
-
-                <p>
-
-                    Dessa forma, o produto final possibilitou integrar
-                    tecnologia, programação, óptica e acessibilidade,
-                    demonstrando como os conhecimentos desenvolvidos
-                    em sala de aula podem ser utilizados na criação
-                    de soluções que contribuam para uma sociedade
-                    mais inclusiva e acessível.
-
-                </p>
-
-
-                <p>
-
-                    Por meio dessas experiências, os estudantes puderam
-                    relacionar os conhecimentos estudados com situações
-                    concretas, desenvolvendo o pensamento crítico,
-                    a criatividade, a investigação e a capacidade
-                    de trabalhar coletivamente.
-
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             04 - GALERIA DE FOTOS
-             ================================================= -->
-
-        <section class="secao secao-azul">
-
-            <div class="titulo-secao">
-
-                <span>
-                    04
-                </span>
-
-                <h2>
-                    Galeria de Fotos
-                </h2>
-
-            </div>
-
-
-            <div class="sobre-texto">
-
-                <p>
-
-                    Confira alguns registros dos trabalhos e das
-                    atividades desenvolvidas pelos estudantes
-                    durante o projeto de <strong>Física e Tecnociência</strong>.
-
-                </p>
-
-                <p>
-
-                    As imagens apresentam a produção dos infográficos, mapas conceituais,
-                    desenvolvimento das propostas e elaboração
-                    do <strong>QR Code – Cardápio Acessível</strong>.
-
-                </p>
-
-            </div>
+            </section>
 
 
 
             <!-- =================================================
-                 GALERIA
+                 02 - O QUE É TECNOCIÊNCIA
                  ================================================= -->
 
-            <div class="galeria">
+            <section class="secao">
 
+                <div class="titulo-secao">
 
-                <!-- FOTO 01 -->
+                    <span>
+                        01
+                    </span>
 
-                <figure class="foto-galeria">
+                    <div>
 
-                    <img src="img/card 1.png"
-                         alt="cardapio acessível">
+                        <small>
+                            CONHECIMENTO
+                        </small>
 
-                    <figcaption>
-                      QR Code – Cardápio Acessível
-                    </figcaption>
+                        <h2>
+                            O que é Tecnociência?
+                        </h2>
 
-                </figure>
+                    </div>
 
+                </div>
 
 
-                <!-- FOTO 02 -->
+                <div class="sobre-texto">
 
-                <figure class="foto-galeria">
+                    <p>
+                        A <strong>Tecnociência</strong> refere-se à
+                        estreita relação entre ciência e tecnologia
+                        na sociedade contemporânea. O desenvolvimento
+                        científico contribui para a criação de novas
+                        tecnologias, enquanto as tecnologias também
+                        possibilitam novas formas de produzir
+                        conhecimentos científicos.
+                    </p>
 
-                    <img src="img/card. 2.png"
-                         alt="cardapio acessível">
+                    <p>
+                        Essa relação pode ser observada em diferentes
+                        áreas da sociedade, como comunicação, saúde,
+                        transporte, produção industrial, energia,
+                        educação e diversas outras atividades presentes
+                        no cotidiano.
+                    </p>
 
-                    <figcaption>
-                       QR Code – Cardápio Acessível
-                    </figcaption>
+                    <p>
+                        Estudar Tecnociência significa também refletir
+                        sobre as transformações provocadas pela ciência
+                        e pela tecnologia, considerando suas possibilidades,
+                        seus benefícios, seus desafios e suas consequências
+                        para a sociedade e para o meio ambiente.
+                    </p>
 
-                </figure>
+                </div>
 
+            </section>
 
 
-                <!-- FOTO 03 -->
 
-                <figure class="foto-galeria">
+            <!-- =================================================
+                 03 - CIÊNCIA, TECNOLOGIA E SOCIEDADE
+                 ================================================= -->
 
-                    <img src="img/card. 3.png"
-                         alt="cardapio acessível">
+            <section class="secao secao-azul">
 
-                    <figcaption>
-                       QR Code – Cardápio Acessível
-                    </figcaption>
+                <div class="titulo-secao">
 
-                </figure>
+                    <span>
+                        02
+                    </span>
 
+                    <div>
 
+                        <small>
+                            RELAÇÃO
+                        </small>
 
-                <!-- FOTO 04 -->
+                        <h2>
+                            Ciência, Tecnologia e Sociedade
+                        </h2>
 
-                <figure class="foto-galeria">
+                    </div>
 
-                    <img src="img/4.png"
-                         alt="cardapio Acessível">
+                </div>
 
-                    <figcaption>
-                        QR Code – Cardápio Acessível
-                    </figcaption>
 
-                </figure>
+                <div class="cards">
 
 
+                    <!-- CARD CIÊNCIA -->
 
-                <!-- FOTO 05 -->
+                    <article>
 
-                <figure class="foto-galeria">
+                        <div class="card-icone">
+                            🔬
+                        </div>
 
-                    <img src="img/card. 6.png"
-                         alt="cardapio acessível">
+                        <h3>
+                            Ciência
+                        </h3>
 
-                    <figcaption>
-                        QR Code – Cardápio Acessível
-                    </figcaption>
+                        <p>
+                            A ciência envolve a produção de conhecimentos
+                            por meio da investigação, da observação,
+                            da análise e da busca por explicações sobre
+                            diferentes fenômenos.
+                        </p>
 
-                </figure>
+                    </article>
 
 
 
-                <!-- FOTO 06 -->
+                    <!-- CARD TECNOLOGIA -->
 
-                <figure class="foto-galeria">
+                    <article>
 
-                    <img src="img/Screenshot 2026-09-03 20.32.07.png"
-                         alt="Infográfico sobre smartphones e acessibilidade">
+                        <div class="card-icone">
+                            ⚙️
+                        </div>
 
-                    <figcaption>
-                        Projeto Infográfico sobre smartphones e acessibilidade
-                        
-                    </figcaption>
+                        <h3>
+                            Tecnologia
+                        </h3>
 
-                </figure>
+                        <p>
+                            A tecnologia envolve conhecimentos, técnicas,
+                            ferramentas e processos utilizados para criar
+                            produtos, desenvolver soluções e atender a
+                            diferentes necessidades da sociedade.
+                        </p>
 
+                    </article>
 
 
-                <!-- FOTO 07 -->
 
-                <figure class="foto-galeria">
+                    <!-- CARD SOCIEDADE -->
 
-                    <img src="img/Screenshot 2026-09-03 20.34.35.png"
-                         alt="Trabalho apresentado pelos estudantes">
+                    <article>
 
-                    <figcaption>
-                        Projeto Infográfico sobre smartphones e acessibilidade
-                    </figcaption>
+                        <div class="card-icone">
+                            🌎
+                        </div>
 
-                </figure>
+                        <h3>
+                            Sociedade
+                        </h3>
 
+                        <p>
+                            A sociedade participa da produção e utilização
+                            das tecnologias e também é transformada pelos
+                            seus efeitos, possibilidades e desafios.
+                        </p>
 
+                    </article>
 
-                <!-- FOTO 08 -->
+                </div>
 
-                <figure class="foto-galeria">
+            </section>
 
-                    <img src="img/Screenshot 2026-09-03 20.35.40.png"
-                         alt=" Projeto Infográfico sobre smartphones e acessibilidade">
 
-                    <figcaption>
-                        Projeto Infográfico sobre smartphones e acessibilidade
-                    </figcaption>
 
-                </figure>
+            <!-- =================================================
+                 04 - PROJETO IFA
+                 ================================================= -->
 
-                <!-- FOTO 00 -->
+            <section class="secao">
 
-                <figure class="foto-galeria">
+                <div class="titulo-secao">
 
-                    <img src="img/Screenshot 2026-09-03 20.36.10.png"
-                         alt=" Projeto Infográfico sobre smartphones e acessibilidade">
+                    <span>
+                        03
+                    </span>
 
-                    <figcaption>
-                        Projeto Infográfico sobre smartphones e acessibilidade
-                    </figcaption>
+                    <div>
 
-                </figure>
+                        <small>
+                            PROJETO
+                        </small>
 
-                <!-- FOTO 10 -->
+                        <h2>
+                            IFA - Física e Tecnociência
+                        </h2>
 
-                <figure class="foto-galeria">
+                    </div>
 
-                    <img src="img/Screenshot 2026-09-03 20.39.29.png"
-                         alt=" Projeto Infográfico sobre smartphones e acessibilidade">
+                </div>
 
-                    <figcaption>
-                        Projeto Infográfico sobre smartphones e acessibilidade
-                    </figcaption>
 
-                </figure>
+                <div class="sobre-texto">
 
+                    <p>
+                        Entre as experiências desenvolvidas no projeto
+                        <strong>Ciêntificando com IFAS</strong> está o
+                        <strong>IFA - Física e Tecnociência</strong>,
+                        realizado com a orientação da
+                        <strong>professora Cristina</strong>, na área
+                        de Tecnociência, tendo como tema
+                        <strong>Acessibilidade para a Visão</strong>.
+                    </p>
 
 
-            </div>
+                    <p>
+                        O produto final do trimestre teve como objetivo
+                        a <strong>divulgação, no site, de publicações
+                        relacionadas à acessibilidade para pessoas
+                        cegas ou com baixa visão</strong>, articulando
+                        conhecimentos de tecnologia, programação,
+                        óptica e inclusão.
+                    </p>
 
-        </section>
 
+                    <p>
+                        Ao longo do trimestre, os estudantes da
+                        <strong>2ª Série C e da 2ª Série D</strong>
+                        desenvolveram atividades voltadas à identificação
+                        de necessidades do cotidiano e à elaboração de
+                        soluções tecnológicas acessíveis.
+                    </p>
 
 
-        <!-- =================================================
-             05 - APRENDER FAZENDO
-             ================================================= -->
+                    <p>
+                        Como parte das atividades, os estudantes foram
+                        convidados a elaborar um <strong>infográfico</strong>
+                        sobre de que forma a popularização dos smartphones,
+                        especialmente aqueles equipados com câmeras de
+                        maior resolução, pode contribuir para a acessibilidade
+                        de pessoas cegas ou com baixa visão.
+                    </p>
 
-        <section class="secao">
 
-            <div class="titulo-secao">
+                    <p>
+                        A proposta possibilitou refletir sobre o uso da
+                        tecnologia como ferramenta de inclusão e autonomia.
+                    </p>
 
-                <span>
-                    05
-                </span>
 
-                <h2>
-                    Aprender fazendo
-                </h2>
+                    <p>
+                        Também foi desenvolvido um
+                        <strong>mapa conceitual sobre as aplicações
+                        da óptica</strong> nos diferentes contextos
+                        da sociedade, contemplando os ambientes residencial,
+                        comercial, escolar e industrial.
+                    </p>
 
-            </div>
 
+                    <p>
+                        Como produto prático, os estudantes desenvolveram
+                        a proposta <strong>QR Code – Cardápio Acessível</strong>.
+                        A atividade consistiu na criação de um cardápio
+                        digital acessível, utilizando o QR Code como recurso
+                        tecnológico para facilitar o acesso às informações
+                        por meio do celular.
+                    </p>
 
-            <div class="sobre-texto">
 
-                <p>
+                    <p>
+                        Organizados em equipes, os estudantes planejaram
+                        e desenvolveram uma solução considerando princípios
+                        de acessibilidade, praticidade e inclusão,
+                        aplicando conhecimentos de programação e tecnologia.
+                    </p>
 
-                    O desenvolvimento das atividades de Física
-                    e Tecnociência possibilitou aos estudantes
-                    participar de um processo de aprendizagem
-                    baseado na pesquisa, na investigação e na
-                    resolução de problemas.
 
-                </p>
+                    <p>
+                        Durante o desenvolvimento das atividades, foram
+                        estimuladas competências como
+                        <strong>criatividade, pensamento computacional,
+                        autonomia, resolução de problemas, pesquisa e
+                        trabalho colaborativo</strong>.
+                    </p>
 
 
-                <p>
+                    <p>
+                        Dessa forma, o produto final possibilitou integrar
+                        tecnologia, programação, óptica e acessibilidade,
+                        demonstrando como os conhecimentos desenvolvidos
+                        em sala de aula podem ser utilizados na criação
+                        de soluções que contribuam para uma sociedade
+                        mais inclusiva e acessível.
+                    </p>
 
-                    O trabalho em grupo também contribuiu para
-                    desenvolver a colaboração, a comunicação,
-                    a organização e a responsabilidade na
-                    realização das atividades.
+                </div>
 
-                </p>
+            </section>
 
 
-                <p>
 
-                    A experiência demonstra que o conhecimento
-                    científico pode ser construído de maneira
-                    significativa quando os estudantes são
-                    envolvidos na investigação e na produção
-                    de soluções para situações presentes em
-                    seu contexto.
+            <!-- =================================================
+                 05 - GALERIA DE FOTOS
+                 ================================================= -->
 
-                </p>
+            <section class="secao secao-azul">
 
-            </div>
+                <div class="titulo-secao">
 
-        </section>
+                    <span>
+                        04
+                    </span>
 
+                    <div>
 
-    </main>
+                        <small>
+                            REGISTROS
+                        </small>
+
+                        <h2>
+                            Galeria de Fotos
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sobre-texto">
+
+                    <p>
+                        Confira alguns registros dos trabalhos e das
+                        atividades desenvolvidas pelos estudantes
+                        durante o projeto de
+                        <strong>Física e Tecnociência</strong>.
+                    </p>
+
+
+                    <p>
+                        As imagens apresentam a produção dos infográficos,
+                        mapas conceituais, desenvolvimento das propostas
+                        e elaboração do
+                        <strong>QR Code – Cardápio Acessível</strong>.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     GALERIA
+                     ================================================= -->
+
+                <div class="galeria">
+
+
+                    <!-- FOTO 01 -->
+
+                    <figure class="foto-galeria">
+
+                        <img src="img/card 1.png"
+                             alt="Cardápio acessível desenvolvido pelos estudantes">
+
+                        <figcaption>
+                            QR Code – Cardápio Acessível
+                        </figcaption>
+
+                    </figure>
+
+
+
+                    <!-- FOTO 02 -->
+
+                    <figure class="foto-galeria">
+
+                        <img src="img/card. 2.png"
+                             alt="Cardápio acessível desenvolvido pelos estudantes">
+
+                        <figcaption>
+                            QR Code – Cardápio Acessível
+                        </figcaption>
+
+                    </figure>
+
+
+
+                    <!-- FOTO 03 -->
+
+                    <figure class="foto-galeria">
+
+                        <img src="img/card. 3.png"
+                             alt="Cardápio acessível desenvolvido pelos estudantes">
+
+                        <figcaption>
+                            QR Code – Cardápio Acessível
+                        </figcaption>
+
+                    </figure>
+
+
+
+                    <!-- FOTO 04 -->
+
+                    <figure class="foto-galeria">
+
+                        <img src="img/4.png"
+                             alt="Cardápio acessível desenvolvido pelos estudantes">
+
+                        <figcaption>
+                            QR Code – Cardápio Acessível
+                        </figcaption>
+
+                    </figure>
+
+
+
+                    <!-- FOTO 05 -->
+
+                    <figure class="foto-galeria">
+
+                        <img src="img/card. 6.png"
+                             alt="Cardápio acessível desenvolvido pelos estudantes">
+
+                        <figcaption>
+                            QR Code – Cardápio Acessível
+                        </figcaption>
+
+                    </figure>
+
+
+
+                    <!-- FOTO 06 -->
+
+                    <figure class="foto-galeria">
+
+                        <img src="img/Screenshot 2026-09-03 20.32.07.png"
+                             alt="Infográfico sobre smartphones e acessibilidade">
+
+                        <figcaption>
+                            Infográfico sobre smartphones e acessibilidade
+                        </figcaption>
+
+                    </figure>
+
+
+
+                    <!-- FOTO 07 -->
+
+                    <figure class="foto-galeria">
+
+                        <img src="img/Screenshot 2026-09-03 20.34.35.png"
+                             alt="Trabalho apresentado pelos estudantes">
+
+                        <figcaption>
+                            Infográfico sobre smartphones e acessibilidade
+                        </figcaption>
+
+                    </figure>
+
+
+
+                    <!-- FOTO 08 -->
+
+                    <figure class="foto-galeria">
+
+                        <img src="img/Screenshot 2026-09-03 20.35.40.png"
+                             alt="Projeto de infográfico sobre smartphones e acessibilidade">
+
+                        <figcaption>
+                            Infográfico sobre smartphones e acessibilidade
+                        </figcaption>
+
+                    </figure>
+
+
+
+                    <!-- FOTO 09 -->
+
+                    <figure class="foto-galeria">
+
+                        <img src="img/Screenshot 2026-09-03 20.36.10.png"
+                             alt="Projeto de infográfico sobre smartphones e acessibilidade">
+
+                        <figcaption>
+                            Infográfico sobre smartphones e acessibilidade
+                        </figcaption>
+
+                    </figure>
+
+
+
+                    <!-- FOTO 10 -->
+
+                    <figure class="foto-galeria">
+
+                        <img src="img/Screenshot 2026-09-03 20.39.29.png"
+                             alt="Projeto de infográfico sobre smartphones e acessibilidade">
+
+                        <figcaption>
+                            Infográfico sobre smartphones e acessibilidade
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 06 - APRENDER FAZENDO
+                 ================================================= -->
+
+            <section class="secao">
+
+                <div class="titulo-secao">
+
+                    <span>
+                        05
+                    </span>
+
+                    <div>
+
+                        <small>
+                            EXPERIÊNCIA
+                        </small>
+
+                        <h2>
+                            Aprender fazendo
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sobre-texto">
+
+                    <p>
+                        O desenvolvimento das atividades de Física
+                        e Tecnociência possibilitou aos estudantes
+                        participar de um processo de aprendizagem
+                        baseado na pesquisa, na investigação e na
+                        resolução de problemas.
+                    </p>
+
+
+                    <p>
+                        O trabalho em grupo também contribuiu para
+                        desenvolver a colaboração, a comunicação,
+                        a organização e a responsabilidade na
+                        realização das atividades.
+                    </p>
+
+
+                    <p>
+                        A experiência demonstra que o conhecimento
+                        científico pode ser construído de maneira
+                        significativa quando os estudantes são
+                        envolvidos na investigação e na produção
+                        de soluções para situações presentes em
+                        seu contexto.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+
+        <!-- =====================================================
+             RODAPÉ
+             ===================================================== -->
+
+        <footer class="rodape">
+
+            <p>
+                Física e Tecnociência –
+                Professora Cristina Ap Fadel Weigert
+            </p>
+
+            <p>
+                © 2026 – Colégio Estadual Professor Gabriel Rosa
+            </p>
+
+        </footer>
+
+
+    </div>
 
 
 
     <!-- =====================================================
-         RODAPÉ
+         JAVASCRIPT
          ===================================================== -->
 
-    <footer class="rodape">
-
-        <p>
-
-            Física e Tecnociência –
-            Professora Cristina Ap Fadel Weigert
-
-        </p>
-
-
-        <p>
-
-            © 2026 – Colégio Estadual Professor Gabriel Rosa
-
-        </p>
-
-    </footer>
-
-
-</div>
-
-
-
-<!-- =====================================================
-     JAVASCRIPT
-     ===================================================== -->
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 
 </body>
 
 </html>
-```
